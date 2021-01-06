@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+:root {
+  --falu-red: #821515;
+  --falu-red-light-1: #efe5e4;
+  --falu-red-light-2: #e8d5d4;
+  --white: #f7f7f6;
+  --text-margin: 16px;
+  --body-padding: 0 36px;
+  font-size: 20px;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: var(--falu-red);
+  margin: var(--text-margin) 0;
+}
+
+img {
+  background-size: cover;
+  background-position: no-repeat;
+  background-repeat: no-repeat;
+}
+
+p {
+  color: var(--falu-red);
+  margin: var(--text-margin) 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--body-padding);
+  margin: 20px 0 36px 0;
+}
+nav h1 {
+  width: 100px;
+  font-size: 1rem;
+}
+nav button {
+  border: 0;
+  background-color: var(--white);
+}
+
+header {
+  margin-bottom: 80px;
+  padding: var(--body-padding);
+}
+header img {
+  width: 100%;
+}
+header p {
+  font-weight: 600;
+}
+header p.read-more {
+  text-align: right;
+}
+
+section.learn {
+  margin: 80px 0;
+  padding: var(--body-padding);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: var(--falu-red-light-1);
+}
+section.learn img {
+  width: 100%;
+}
+section.learn .card-container {
+  margin: 30px 0;
+}
+section.learn .card-container .card {
+  background-color: var(--falu-red-light-2);
+  margin: 40px 0;
+}
+section.learn .card-container .card .text {
+  padding: 24px 36px;
+  font-size: 20px;
+  text-align: center;
+}
+
+section.articles {
+  margin: 80px 0;
+  padding: var(--body-padding);
+}
+section.articles .article-container {
+  margin: 50px 0;
+}
+section.articles .article-container .article {
+  display: flex;
+  justify-content: space-between;
+}
+section.articles .article-container .article .article-image {
+  width: 50%;
+}
+section.articles .article-container .article .article-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+section.articles .article-container .article .text {
+  width: 40%;
+}
+section.articles .article-container .article .text h1 {
+  font-size: 16px;
+  text-align: center;
+}
+section.articles .article-container hr {
+  margin: 15px 0;
+  border-top: 1px solid var(--falu-red-light-2);
+}
+section.articles .btn {
+  display: flex;
+  justify-content: center;
+}
+section.articles button {
+  background-color: var(--falu-red-light-2);
+  color: var(--falu-red);
+  font-weight: 700;
+  text-align: center;
+  border: 0;
+  padding: 10px 20px;
+}
+
+section.instagram {
+  margin: 80px 0;
+  padding: var(--body-padding);
+}
+section.instagram .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+section.instagram .image-container .image {
+  width: 46%;
+  height: auto;
+  margin: 2% 2%;
+}
+section.instagram .image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  background-color: var(--falu-red-light-1);
+  padding: var(--body-padding);
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+footer h1 {
+  font-size: 1rem;
+  width: 40px;
+}
+footer p {
+  font-weight: 700;
+  font-size: 14px;
+}
+footer form {
+  display: flex;
+  width: 100%;
+}
+footer form input {
+  font-size: 12px;
+  height: 34px;
+  width: 60%;
+  padding-left: 10px;
+  border: 0;
+}
+footer form input::placeholder {
+  color: var(--falu-red);
+  font-weight: 700;
+}
+footer form button {
+  background-color: var(--falu-red);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 12px;
+  width: 40%;
+  border: 0;
+}
+footer nav.footer-nav {
+  display: flex;
+  padding: 0;
+}
+footer nav.footer-nav .nav-links {
+  width: 60%;
+}
+footer nav.footer-nav .nav-links ul {
+  padding: 0;
+}
+footer nav.footer-nav .nav-links ul li {
+  color: var(--falu-red);
+  font-weight: 700;
+  font-size: 14px;
+  margin: 13px 0;
+  list-style-type: none;
+}
+footer nav.footer-nav .socials {
+  width: 40%;
+}
+footer nav.footer-nav .socials img {
+  margin-right: 15px;
+}
+footer .icon {
+  height: 20px;
+}
+footer .ending-tag {
+  text-align: center;
+}
+footer .ending-tag span {
+  font-family: "Source Sans Pro", sans-serif;
+}
+footer .ending-tag h2 {
+  font-size: 12px;
+}
+footer .ending-tag p {
+  font-size: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
