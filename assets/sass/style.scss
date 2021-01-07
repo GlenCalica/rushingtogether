@@ -37,11 +37,9 @@ p {
   margin: var(--text-margin) 0;
 }
 
-// nav,
-// header,
-// section.learn {
-//   padding: var(--body-padding);
-// }
+p.excerpt {
+  display: none;
+}
 
 nav {
   display: flex;
@@ -57,6 +55,19 @@ nav {
   button {
     border: 0;
     background-color: var(--white);
+  }
+
+  .nav-bar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      color: var(--falu-red);
+      font-weight: 700;
+      margin: 10px;
+    }
   }
 }
 
@@ -95,7 +106,6 @@ section.learn {
       margin: 40px 0;
       .text {
         padding: 24px 36px;
-        font-size: 20px;
         text-align: center;
       }
     }
@@ -190,6 +200,7 @@ footer {
   form {
     display: flex;
     width: 100%;
+    max-width: 500px;
     input {
       font-size: 12px;
       height: 34px;
@@ -251,5 +262,157 @@ footer {
     p {
       font-size: 10px;
     }
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  :root {
+    --body-padding: 0 48px;
+  }
+
+  section.articles .article-container .article .text h1 {
+    font-size: 20px;
+  }
+
+  nav h1 {
+    font-size: 1.4rem;
+  }
+
+  footer {
+    h1 {
+      font-size: 1.4rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .subscribe {
+      margin: 30px 0;
+      form button,
+      form input {
+        font-size: 18px;
+        padding: 5px 10px;
+      }
+    }
+
+    nav.footer-nav .nav-links ul li {
+      font-size: 1rem;
+    }
+
+    .ending-tag h2 {
+      font-size: 18px;
+    }
+
+    .ending-tag p {
+      font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  section.learn .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+      width: 46%;
+      height: auto;
+      margin: 2% 2%;
+
+      .text {
+        text-align: center;
+
+        h2 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  section.articles .article-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .article {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 46%;
+      height: auto;
+      margin: 4% 2%;
+
+      .article-image {
+        width: 100%;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      .text {
+        width: 90%;
+        text-align: center;
+        h1 {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    hr {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  p.excerpt {
+    display: inline;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  p.excerpt {
+    display: inline;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 50%;
+    }
+
+    .featured-text {
+      display: flex;
+      flex-direction: column;
+      width: 45%;
+
+      .read-more {
+        margin-top: auto;
+      }
+    }
+  }
+
+  section.instagram .image-container .image {
+    width: 23%;
+    margin: 1% 1%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  section.learn .card-container .card {
+    width: 31%;
+    margin: 1% 1%;
+  }
+
+  section.articles .article-container .article {
+    width: 31%;
+    margin: 4% 1%;
   }
 }
