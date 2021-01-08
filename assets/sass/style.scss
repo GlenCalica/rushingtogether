@@ -41,6 +41,33 @@ p.excerpt {
   display: none;
 }
 
+.email,
+.search {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  input {
+    font-size: 12px;
+    height: 34px;
+    width: 60%;
+    padding-left: 10px;
+    border: 0;
+  }
+
+  input::placeholder {
+    color: var(--falu-red);
+    font-weight: 700;
+  }
+  button {
+    background-color: var(--falu-red);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 12px;
+    width: 30%;
+    border: 0;
+  }
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -57,16 +84,43 @@ nav {
     background-color: var(--white);
   }
 
-  .nav-bar ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  .nav-bar {
+    display: none;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      min-width: 800px;
 
-    li {
-      color: var(--falu-red);
-      font-weight: 700;
-      margin: 10px;
+      li {
+        color: var(--falu-red);
+        font-size: 16px;
+        font-weight: 700;
+        margin: 10px;
+
+        .search {
+          margin-left: 20px;
+          form {
+            position: relative;
+            height: 44px;
+            width: 264px;
+            input {
+              position: absolute;
+              width: 200px;
+              height: 100%;
+            }
+            button {
+              position: absolute;
+              width: 44px;
+              height: 100%;
+              right: 0;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -197,38 +251,13 @@ footer {
     font-size: 14px;
   }
 
-  form {
-    display: flex;
-    width: 100%;
-    max-width: 500px;
-    input {
-      font-size: 12px;
-      height: 34px;
-      width: 60%;
-      padding-left: 10px;
-      border: 0;
-    }
-
-    input::placeholder {
-      color: var(--falu-red);
-      font-weight: 700;
-    }
-    button {
-      background-color: var(--falu-red);
-      color: var(--white);
-      font-weight: 700;
-      font-size: 12px;
-      width: 40%;
-      border: 0;
-    }
-  }
-
   nav.footer-nav {
     display: flex;
     padding: 0;
     .nav-links {
       width: 60%;
       ul {
+        margin: 0;
         padding: 0;
         li {
           color: var(--falu-red);
@@ -240,11 +269,18 @@ footer {
       }
     }
     .socials {
+      .social-title {
+        margin-top: 13px 0;
+      }
       width: 40%;
       img {
         margin-right: 15px;
       }
     }
+  }
+
+  .subscribe {
+    max-width: 500px;
   }
 
   .icon {
@@ -270,6 +306,32 @@ footer {
     --body-padding: 0 48px;
   }
 
+  .subscribe,
+  .search {
+    form button,
+    form input {
+      font-size: 18px;
+      padding: 0 10px;
+    }
+
+    form button {
+      padding: 0;
+
+      img {
+        transform: translateX(-1px);
+      }
+    }
+  }
+
+  .subscribe {
+    margin: 30px 0;
+    form button,
+    form input {
+      font-size: 18px;
+      padding: 5px 10px;
+    }
+  }
+
   section.articles .article-container .article .text h1 {
     font-size: 20px;
   }
@@ -285,15 +347,6 @@ footer {
 
     p {
       font-size: 1rem;
-    }
-
-    .subscribe {
-      margin: 30px 0;
-      form button,
-      form input {
-        font-size: 18px;
-        padding: 5px 10px;
-      }
     }
 
     nav.footer-nav .nav-links ul li {
@@ -368,7 +421,16 @@ footer {
 @media only screen and (min-width: 700px) {
   p.excerpt {
     display: inline;
+    margin: 16px 0;
     font-size: 14px;
+  }
+
+  section.learn .card-container .text h2 {
+    margin-top: 0;
+  }
+
+  section.articles .article-container .article .text {
+    padding: 20px 0;
   }
 }
 
@@ -414,5 +476,169 @@ footer {
   section.articles .article-container .article {
     width: 31%;
     margin: 4% 1%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav .hamburger-menu {
+    display: none;
+  }
+
+  nav .nav-bar {
+    display: flex;
+  }
+
+  footer {
+    h1 {
+      font-size: 2rem;
+      width: 100%;
+    }
+
+    .footer-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+      .subscribe {
+        width: 50%;
+        margin-top: 0;
+        p {
+          margin-top: 13px;
+        }
+      }
+
+      .footer-nav {
+        width: 45%;
+        margin-top: 0;
+
+        .nav-links {
+          order: 2;
+        }
+
+        .socials img.icon {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+
+    .ending-tag {
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  :root {
+    --body-padding: 0 10%;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  nav {
+    .nav-bar ul li {
+      font-size: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      width: 500px;
+    }
+  }
+
+  p.excerpt {
+    font-size: 1rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 55%;
+    }
+
+    .featured-text {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+
+      .read-more {
+        margin-top: auto;
+      }
+    }
+  }
+
+  section.learn .card-container {
+    justify-content: space-between;
+    .card {
+      max-width: 400px;
+    }
+  }
+
+  section.articles .article-container {
+    justify-content: space-between;
+    .article {
+      max-width: 400px;
+    }
+  }
+
+  section.articles .article-container .article .text h1 {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  :root {
+    --body-padding: 0 14%;
+  }
+
+  section.learn .card-container .card .text {
+    padding: 36px 48px;
+  }
+
+  section.articles .article-container .article .text {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+  :root {
+    --body-padding: 0 20%;
+  }
+}
+
+@media only screen and (min-width: 2880px) {
+  :root {
+    --body-padding: 0 25%;
+  }
+}
+
+@media only screen and (min-width: 3360px) {
+  :root {
+    --body-padding: 0 30%;
+  }
+}
+
+@media only screen and (min-width: 3640px) {
+  :root {
+    --body-padding: 0 35%;
+  }
+}
+
+@media only screen and (min-width: 5795px) {
+  :root {
+    --body-padding: 0 40%;
   }
 }

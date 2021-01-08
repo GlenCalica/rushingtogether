@@ -40,6 +40,35 @@ p.excerpt {
   display: none;
 }
 
+.email,
+.search {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.email input,
+.search input {
+  font-size: 12px;
+  height: 34px;
+  width: 60%;
+  padding-left: 10px;
+  border: 0;
+}
+.email input::placeholder,
+.search input::placeholder {
+  color: var(--falu-red);
+  font-weight: 700;
+}
+.email button,
+.search button {
+  background-color: var(--falu-red);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 12px;
+  width: 30%;
+  border: 0;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -54,16 +83,42 @@ nav button {
   border: 0;
   background-color: var(--white);
 }
+nav .nav-bar {
+  display: none;
+}
 nav .nav-bar ul {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  min-width: 800px;
 }
 nav .nav-bar ul li {
   color: var(--falu-red);
+  font-size: 16px;
   font-weight: 700;
   margin: 10px;
+}
+nav .nav-bar ul li .search {
+  margin-left: 20px;
+}
+nav .nav-bar ul li .search form {
+  position: relative;
+  height: 44px;
+  width: 264px;
+}
+nav .nav-bar ul li .search form input {
+  position: absolute;
+  width: 200px;
+  height: 100%;
+}
+nav .nav-bar ul li .search form button {
+  position: absolute;
+  width: 44px;
+  height: 100%;
+  right: 0;
 }
 
 header {
@@ -177,30 +232,6 @@ footer p {
   font-weight: 700;
   font-size: 14px;
 }
-footer form {
-  display: flex;
-  width: 100%;
-  max-width: 500px;
-}
-footer form input {
-  font-size: 12px;
-  height: 34px;
-  width: 60%;
-  padding-left: 10px;
-  border: 0;
-}
-footer form input::placeholder {
-  color: var(--falu-red);
-  font-weight: 700;
-}
-footer form button {
-  background-color: var(--falu-red);
-  color: var(--white);
-  font-weight: 700;
-  font-size: 12px;
-  width: 40%;
-  border: 0;
-}
 footer nav.footer-nav {
   display: flex;
   padding: 0;
@@ -209,6 +240,7 @@ footer nav.footer-nav .nav-links {
   width: 60%;
 }
 footer nav.footer-nav .nav-links ul {
+  margin: 0;
   padding: 0;
 }
 footer nav.footer-nav .nav-links ul li {
@@ -221,8 +253,14 @@ footer nav.footer-nav .nav-links ul li {
 footer nav.footer-nav .socials {
   width: 40%;
 }
+footer nav.footer-nav .socials .social-title {
+  margin-top: 13px 0;
+}
 footer nav.footer-nav .socials img {
   margin-right: 15px;
+}
+footer .subscribe {
+  max-width: 500px;
 }
 footer .icon {
   height: 20px;
@@ -245,6 +283,31 @@ footer .ending-tag p {
     --body-padding: 0 48px;
   }
 
+  .subscribe form button,
+.subscribe form input,
+.search form button,
+.search form input {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+  .subscribe form button,
+.search form button {
+    padding: 0;
+  }
+  .subscribe form button img,
+.search form button img {
+    transform: translateX(-1px);
+  }
+
+  .subscribe {
+    margin: 30px 0;
+  }
+  .subscribe form button,
+.subscribe form input {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+
   section.articles .article-container .article .text h1 {
     font-size: 20px;
   }
@@ -258,14 +321,6 @@ footer .ending-tag p {
   }
   footer p {
     font-size: 1rem;
-  }
-  footer .subscribe {
-    margin: 30px 0;
-  }
-  footer .subscribe form button,
-footer .subscribe form input {
-    font-size: 18px;
-    padding: 5px 10px;
   }
   footer nav.footer-nav .nav-links ul li {
     font-size: 1rem;
@@ -328,7 +383,16 @@ footer .subscribe form input {
 @media only screen and (min-width: 700px) {
   p.excerpt {
     display: inline;
+    margin: 16px 0;
     font-size: 14px;
+  }
+
+  section.learn .card-container .text h2 {
+    margin-top: 0;
+  }
+
+  section.articles .article-container .article .text {
+    padding: 20px 0;
   }
 }
 @media only screen and (min-width: 850px) {
@@ -368,6 +432,144 @@ footer .subscribe form input {
   section.articles .article-container .article {
     width: 31%;
     margin: 4% 1%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  nav .hamburger-menu {
+    display: none;
+  }
+
+  nav .nav-bar {
+    display: flex;
+  }
+
+  footer h1 {
+    font-size: 2rem;
+    width: 100%;
+  }
+  footer .footer-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  footer .footer-menu .subscribe {
+    width: 50%;
+    margin-top: 0;
+  }
+  footer .footer-menu .subscribe p {
+    margin-top: 13px;
+  }
+  footer .footer-menu .footer-nav {
+    width: 45%;
+    margin-top: 0;
+  }
+  footer .footer-menu .footer-nav .nav-links {
+    order: 2;
+  }
+  footer .footer-menu .footer-nav .socials img.icon {
+    height: 30px;
+    width: 30px;
+  }
+  footer .ending-tag h2 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  :root {
+    --body-padding: 0 10%;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  nav .nav-bar ul li {
+    font-size: 1rem;
+  }
+  nav h1 {
+    font-size: 2rem;
+    width: 500px;
+  }
+
+  p.excerpt {
+    font-size: 1rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header img {
+    width: 55%;
+  }
+  header .featured-text {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+  header .featured-text .read-more {
+    margin-top: auto;
+  }
+
+  section.learn .card-container {
+    justify-content: space-between;
+  }
+  section.learn .card-container .card {
+    max-width: 400px;
+  }
+
+  section.articles .article-container {
+    justify-content: space-between;
+  }
+  section.articles .article-container .article {
+    max-width: 400px;
+  }
+
+  section.articles .article-container .article .text h1 {
+    font-size: 1.5rem;
+  }
+
+  footer h1 {
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  :root {
+    --body-padding: 0 14%;
+  }
+
+  section.learn .card-container .card .text {
+    padding: 36px 48px;
+  }
+
+  section.articles .article-container .article .text {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 2400px) {
+  :root {
+    --body-padding: 0 20%;
+  }
+}
+@media only screen and (min-width: 2880px) {
+  :root {
+    --body-padding: 0 25%;
+  }
+}
+@media only screen and (min-width: 3360px) {
+  :root {
+    --body-padding: 0 30%;
+  }
+}
+@media only screen and (min-width: 3640px) {
+  :root {
+    --body-padding: 0 35%;
+  }
+}
+@media only screen and (min-width: 5795px) {
+  :root {
+    --body-padding: 0 40%;
   }
 }
 
