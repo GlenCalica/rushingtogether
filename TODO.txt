@@ -1,7 +1,11 @@
-- click outside mobile menu to close it
 - embed instagram posts
+- restyle bottom logos (Follow Us)
 
 
 DONE
 - remove scrolling when mobile menu is open
 - move mobile menu with scroll y position
+- move open mobile menu with user presses tab
+- click outside mobile menu to close it
+
+

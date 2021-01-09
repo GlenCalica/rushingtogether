@@ -1,37 +1,65 @@
 const hamburgerOpen = document.getElementById('hamburger-open');
 const hamburgerClose = document.getElementById('hamburger-close');
 const hamburgerMenu = document.querySelector('.mobile-menu');
+const hamburgerMenuBackground = document.querySelector('.mobile-menu-background');
 
-const siteWrapper = document.querySelector('.site-wrapper');
 
-// let menuOpen = false;
+let menuOpen = false;
 
 hamburgerOpen.addEventListener('click', () => {
-    console.log(window.scrollY);
+    updateMenuPosition();
 
-    hamburgerMenu.style.top = `${window.scrollY}px`
-
-    hamburgerMenu.classList.add('toggle');
-    document.body.style.overflowY = 'hidden';
-    // menuOpen = true;
+    toggleMenu();
 });
 
 hamburgerClose.addEventListener('click', () => {
-    hamburgerMenu.classList.remove('toggle');
-    document.body.style.overflowY = 'visible';
+    toggleMenu();
 });
 
-// window.addEventListener('click', (e) => {   
-//     if (!hamburgerMenu.contains(e.target) && menuOpen === true){
-//         setTimeout( closeMenu, 1000 );
-        
+window.addEventListener('keydown', (e) => {
+    if(e.key === 'Tab') {
+        setTimeout(() => {
+            updateMenuPosition();
+        }, 1);
 
-//     } else{
-        
-//     }
-// });
+    }
+})
 
-// function closeMenu() {
+window.addEventListener('click', (e) => {   
+    if (menuOpen === true){
+        setTimeout(() => {
+            if(!hamburgerMenu.contains(e.target)) toggleMenu();
+        }, 100);
+    }
+});
 
-//     menuOpen = false;
-// }
+window.addEventListener('scroll', (e) => {
+    updateMenuPosition();
+})
+
+function updateMenuPosition() {
+    hamburgerMenu.style.top = `${window.scrollY}px`;
+}
+
+function toggleMenu() {
+    if(menuOpen === true) {
+        hamburgerMenu.classList.remove('toggle');
+        hamburgerMenuBackground.classList.remove('toggle');
+
+        // document.body.style.overflowY = 'visible';
+    
+        setTimeout(() => {
+            menuOpen = false;
+        }, 300);
+    } else {
+        hamburgerMenu.classList.add('toggle');
+        hamburgerMenuBackground.classList.add('toggle');
+
+        // document.body.style.overflowY = 'hidden';
+    
+        setTimeout(() => {
+            menuOpen = true;
+        }, 300);
+    }
+    menuOpen = false;
+}
