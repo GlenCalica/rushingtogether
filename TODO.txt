@@ -1,0 +1,7 @@
+- click outside mobile menu to close it
+- embed instagram posts
+
+
+DONE
+- remove scrolling when mobile menu is open
+- move mobile menu with scroll y position
