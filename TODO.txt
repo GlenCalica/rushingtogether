@@ -1,11 +1,13 @@
+TODO
 - embed instagram posts
-- restyle bottom logos (Follow Us)
-
 
 DONE
+- fixed scrolling bug
+- restyle bottom logos (Follow Us)
+- removed commented css and js
+
+PAST
 - remove scrolling when mobile menu is open
 - move mobile menu with scroll y position
 - move open mobile menu with user presses tab
 - click outside mobile menu to close it
-
-

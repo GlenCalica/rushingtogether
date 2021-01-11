@@ -21,8 +21,6 @@ body {
   overflow-x: hidden;
   overflow-y: visible;
   max-width: 100vw;
-  // overflow-x: -moz-hidden-unscrollable;
-  // -webkit-overflow-scrolling: touch;
 }
 
 a {
@@ -83,7 +81,7 @@ p.excerpt {
   }
 }
 
-nav {
+nav.nav-top {
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -91,12 +89,8 @@ nav {
   padding: 0 var(--body-padding);
   padding-top: 20px;
   padding-bottom: 20px;
-  // padding: 0 var(--body-padding);
-  // margin: 0 var(--body-padding);
   width: calc(100% - (var(--body-padding) * 2));
   background-color: var(--white);
-
-  // --body-padding: 0 36px;
 
   h1 {
     width: 300px;
@@ -106,6 +100,10 @@ nav {
   button {
     border: 0;
     background-color: var(--white);
+  }
+
+  button.btn-search {
+    background-color: var(--falu-red);
   }
 
   .nav-bar {
@@ -167,12 +165,10 @@ nav {
   max-width: 400px;
   background-color: var(--falu-red-light-1);
   height: calc(100vh - 40px);
-  // width: 345px;
   width: calc(100% - 80px);
   padding: 20px 40px;
-  position: absolute;
+  position: fixed;
   top: 0;
-  // right: -425px;
   right: -100%;
   transition: right 0.3s ease-in-out;
   z-index: 10;
@@ -221,12 +217,10 @@ nav {
         position: relative;
         height: 44px;
         width: 100%;
-        // width: 295px;
         input {
           position: absolute;
           left: 0px;
           width: calc(100% - 64px);
-          // width: 231px;
           height: 100%;
         }
         button {
@@ -271,10 +265,6 @@ nav {
 .mobile-menu.toggle > * {
   visibility: visible;
 }
-
-// .lock-scroll {
-//   overflow: hidden;
-// }
 
 header {
   margin-top: 104px;
@@ -498,7 +488,7 @@ footer {
     font-size: 20px;
   }
 
-  nav h1 {
+  nav.nav-top h1 {
     font-size: 1.4rem;
   }
 
@@ -642,11 +632,11 @@ footer {
 }
 
 @media only screen and (min-width: 1024px) {
-  nav .hamburger-open {
+  nav.nav-top .hamburger-open {
     display: none;
   }
 
-  nav .nav-bar {
+  nav.nav-top .nav-bar {
     display: flex;
   }
 
@@ -707,7 +697,7 @@ footer {
     font-size: 3rem;
   }
 
-  nav {
+  nav.nav-top {
     .nav-bar ul li {
       font-size: 1rem;
     }

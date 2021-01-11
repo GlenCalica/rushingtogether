@@ -6,24 +6,10 @@ const hamburgerMenuBackground = document.querySelector('.mobile-menu-background'
 
 let menuOpen = false;
 
-hamburgerOpen.addEventListener('click', () => {
-    updateMenuPosition();
+hamburgerOpen.addEventListener('click', () => toggleMenu());
 
-    toggleMenu();
-});
+hamburgerClose.addEventListener('click', () => toggleMenu());
 
-hamburgerClose.addEventListener('click', () => {
-    toggleMenu();
-});
-
-window.addEventListener('keydown', (e) => {
-    if(e.key === 'Tab') {
-        setTimeout(() => {
-            updateMenuPosition();
-        }, 1);
-
-    }
-})
 
 window.addEventListener('click', (e) => {   
     if (menuOpen === true){
@@ -33,20 +19,10 @@ window.addEventListener('click', (e) => {
     }
 });
 
-window.addEventListener('scroll', (e) => {
-    updateMenuPosition();
-})
-
-function updateMenuPosition() {
-    hamburgerMenu.style.top = `${window.scrollY}px`;
-}
-
 function toggleMenu() {
     if(menuOpen === true) {
         hamburgerMenu.classList.remove('toggle');
         hamburgerMenuBackground.classList.remove('toggle');
-
-        // document.body.style.overflowY = 'visible';
     
         setTimeout(() => {
             menuOpen = false;
@@ -54,12 +30,9 @@ function toggleMenu() {
     } else {
         hamburgerMenu.classList.add('toggle');
         hamburgerMenuBackground.classList.add('toggle');
-
-        // document.body.style.overflowY = 'hidden';
     
         setTimeout(() => {
             menuOpen = true;
         }, 300);
     }
-    menuOpen = false;
 }

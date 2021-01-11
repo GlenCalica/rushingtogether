@@ -82,7 +82,7 @@ p.excerpt {
   border: 0;
 }
 
-nav {
+nav.nav-top {
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -93,18 +93,21 @@ nav {
   width: calc(100% - (var(--body-padding) * 2));
   background-color: var(--white);
 }
-nav h1 {
+nav.nav-top h1 {
   width: 300px;
   font-size: 1rem;
 }
-nav button {
+nav.nav-top button {
   border: 0;
   background-color: var(--white);
 }
-nav .nav-bar {
+nav.nav-top button.btn-search {
+  background-color: var(--falu-red);
+}
+nav.nav-top .nav-bar {
   display: none;
 }
-nav .nav-bar ul {
+nav.nav-top .nav-bar ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -113,26 +116,26 @@ nav .nav-bar ul {
   margin: 0;
   min-width: 600px;
 }
-nav .nav-bar ul li {
+nav.nav-top .nav-bar ul li {
   color: var(--falu-red);
   font-size: 16px;
   font-weight: 700;
   margin: 10px;
 }
-nav .nav-bar ul li .search {
+nav.nav-top .nav-bar ul li .search {
   margin-left: 20px;
 }
-nav .nav-bar ul li .search form {
+nav.nav-top .nav-bar ul li .search form {
   position: relative;
   height: 44px;
   width: 264px;
 }
-nav .nav-bar ul li .search form input {
+nav.nav-top .nav-bar ul li .search form input {
   position: absolute;
   width: 200px;
   height: 100%;
 }
-nav .nav-bar ul li .search form button {
+nav.nav-top .nav-bar ul li .search form button {
   position: absolute;
   width: 44px;
   height: 100%;
@@ -159,7 +162,7 @@ nav .nav-bar ul li .search form button {
   height: calc(100vh - 40px);
   width: calc(100% - 80px);
   padding: 20px 40px;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -100%;
   transition: right 0.3s ease-in-out;
@@ -444,7 +447,7 @@ footer .ending-tag p {
     font-size: 20px;
   }
 
-  nav h1 {
+  nav.nav-top h1 {
     font-size: 1.4rem;
   }
 
@@ -567,11 +570,11 @@ footer .ending-tag p {
   }
 }
 @media only screen and (min-width: 1024px) {
-  nav .hamburger-open {
+  nav.nav-top .hamburger-open {
     display: none;
   }
 
-  nav .nav-bar {
+  nav.nav-top .nav-bar {
     display: flex;
   }
 
@@ -620,10 +623,10 @@ footer .ending-tag p {
     font-size: 3rem;
   }
 
-  nav .nav-bar ul li {
+  nav.nav-top .nav-bar ul li {
     font-size: 1rem;
   }
-  nav h1 {
+  nav.nav-top h1 {
     font-size: 2rem;
     width: 500px;
   }
