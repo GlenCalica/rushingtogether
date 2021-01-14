@@ -78,33 +78,41 @@
 
     <div class="article-container">
 
-        <?php query_posts('posts_per_page=6'); ?>
+        <?php query_posts('posts_per_page=7'); ?>
 
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php
+        $i = 0;
+        if (have_posts()) : while (have_posts()) : the_post();
+                if ($i > 0) : ?>
 
-                <div class="article">
-                    <div class="image-container">
-                        <div class="aspect-ratio">
-                            <div class="aspect-ratio-inside">
-                                <div class="article-image">
-                                    <a href="<?php echo get_permalink(); ?>"><?php if (has_post_thumbnail()) : echo the_post_thumbnail();
-                                                                                endif; ?></a>
+                    <div class="article">
+                        <div class="image-container">
+                            <div class="aspect-ratio">
+                                <div class="aspect-ratio-inside">
+                                    <div class="article-image">
+                                        <a href="<?php echo get_permalink(); ?>"><?php if (has_post_thumbnail()) : echo the_post_thumbnail();
+                                                                                    endif; ?></a>
+                                    </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class=" text">
+                            <a href="<?php echo get_permalink(); ?>">
+                                <h1><?php the_title(); ?></h1>
+                            </a>
+                            <div class="excerpt">
+                                <p class="excerpt"><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>
                             </div>
                         </div>
                     </div>
 
-                    <div class=" text">
-                        <a href="<?php echo get_permalink(); ?>">
-                            <h1><?php the_title(); ?></h1>
-                        </a>
-                        <div class="excerpt"><?php the_excerpt(); ?></div>
-                    </div>
-                </div>
+                    <hr>
 
-                <hr>
-
-        <?php endwhile;
+        <?php
+                endif;
+                $i++;
+            endwhile;
         endif; ?>
 
     </div>

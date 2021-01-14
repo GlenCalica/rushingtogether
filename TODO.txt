@@ -1,5 +1,4 @@
 TODO
-- latest posts doesn't list most recent post (which is already featured at the top)
 - WP menus (bookmarked youtube tutorial)
 - WP menu search
 - learn about coffee culture (maybe custom taxonomy? If not, hard code page reference)
@@ -12,6 +11,10 @@ FUTURE TODO
 - recommendations.php (probably just search.php for recommendations tags without the search bar) + styling
 
 DONE
+- latest posts doesn't list most recent post (which is already featured at the top)
+- limit excerpt length
+
+PAST
 - post headline image (styling)
 - featured post
 - limit home page posts to 6
@@ -21,7 +24,6 @@ DONE
 - restyle bottom logos (Follow Us)
 - removed commented css and js
 
-PAST
 - remove scrolling when mobile menu is open
 - move mobile menu with scroll y position
 - move open mobile menu with user presses tab
