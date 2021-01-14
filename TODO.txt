@@ -1,20 +1,21 @@
 TODO
 - WP menus (bookmarked youtube tutorial)
 - WP menu search
-- learn about coffee culture (maybe custom taxonomy? If not, hard code page reference)
-
 
 FUTURE TODO
 - Styling for page and post (top heading top margin)
 - archive.php + styling
 - search.php (not official name) + styling
 - recommendations.php (probably just search.php for recommendations tags without the search bar) + styling
+- Post tags
 
 DONE
+- learn about coffee culture
+
+PAST
 - latest posts doesn't list most recent post (which is already featured at the top)
 - limit excerpt length
 
-PAST
 - post headline image (styling)
 - featured post
 - limit home page posts to 6
