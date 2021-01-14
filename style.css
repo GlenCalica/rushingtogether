@@ -44,7 +44,6 @@ h5 {
 
 img {
   background-size: cover;
-  background-position: no-repeat;
   background-repeat: no-repeat;
 }
 
@@ -53,7 +52,7 @@ p {
   margin: var(--text-margin) 0;
 }
 
-p.excerpt {
+.excerpt {
   display: none;
 }
 
@@ -86,6 +85,19 @@ p.excerpt {
   border: 0;
 }
 
+.aspect-ratio {
+  position: relative;
+  height: 0;
+  padding-top: 75%;
+}
+.aspect-ratio .aspect-ratio-inside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 nav.nav-top {
   position: fixed;
   display: flex;
@@ -96,6 +108,7 @@ nav.nav-top {
   padding-bottom: 20px;
   width: calc(100% - (var(--body-padding) * 2));
   background-color: var(--white);
+  z-index: 4;
 }
 nav.nav-top h1 {
   width: 300px;
@@ -252,12 +265,19 @@ nav.nav-top .nav-bar ul li .search form button {
   visibility: visible;
 }
 
+.top-margin {
+  padding-top: 104px;
+}
+
 header {
-  margin-top: 104px;
   margin-bottom: 80px;
   padding: 0 var(--body-padding);
 }
+header .image-container {
+  width: 100%;
+}
 header img {
+  height: 100%;
   width: 100%;
 }
 header p {
@@ -265,6 +285,11 @@ header p {
 }
 header p.read-more {
   text-align: right;
+}
+
+section.single {
+  margin: 80px 0;
+  padding: 0 var(--body-padding);
 }
 
 section.learn {
@@ -276,6 +301,7 @@ section.learn {
 }
 section.learn img {
   width: 100%;
+  height: 100%;
 }
 section.learn .card-container {
   margin: 30px 0;
@@ -300,12 +326,16 @@ section.articles .article-container .article {
   display: flex;
   justify-content: space-between;
 }
-section.articles .article-container .article .article-image {
+section.articles .article-container .article .image-container {
   width: 50%;
 }
+section.articles .article-container .article .article-image {
+  width: 100%;
+  height: 100%;
+}
 section.articles .article-container .article .article-image img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 section.articles .article-container .article .text {
   width: 40%;
@@ -485,7 +515,7 @@ footer .ending-tag p {
   section.learn .card-container .card .text {
     text-align: center;
   }
-  section.learn .card-container .card .text h2 {
+  section.learn .card-container .card h2 {
     font-size: 1rem;
   }
 
@@ -497,16 +527,13 @@ footer .ending-tag p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-content: flex-start;
     width: 46%;
     height: auto;
     margin: 4% 2%;
   }
-  section.articles .article-container .article .article-image {
+  section.articles .article-container .article .image-container {
     width: 100%;
-  }
-  section.articles .article-container .article .article-image img {
-    max-width: 100%;
-    max-height: 100%;
   }
   section.articles .article-container .article .text {
     width: 90%;
@@ -520,7 +547,7 @@ footer .ending-tag p {
   }
 }
 @media only screen and (min-width: 700px) {
-  p.excerpt {
+  .excerpt {
     display: inline;
     margin: 16px 0;
     font-size: 14px;
@@ -535,7 +562,7 @@ footer .ending-tag p {
   }
 }
 @media only screen and (min-width: 850px) {
-  p.excerpt {
+  .excerpt {
     display: inline;
     font-size: 16px;
   }
@@ -545,7 +572,8 @@ footer .ending-tag p {
     display: flex;
     justify-content: space-between;
   }
-  header img {
+  header .image-container {
+    height: calc(75% / 2);
     width: 50%;
   }
   header .featured-text {
@@ -635,7 +663,7 @@ footer .ending-tag p {
     width: 500px;
   }
 
-  p.excerpt {
+  .excerpt {
     font-size: 1rem;
   }
 
@@ -643,7 +671,8 @@ footer .ending-tag p {
     display: flex;
     justify-content: space-between;
   }
-  header img {
+  header .image-container {
+    height: calc(75% / (100 / 55));
     width: 55%;
   }
   header .featured-text {
@@ -665,10 +694,6 @@ footer .ending-tag p {
   section.articles .article-container {
     justify-content: space-between;
   }
-  section.articles .article-container .article {
-    max-width: 400px;
-  }
-
   section.articles .article-container .article .text h1 {
     font-size: 1.5rem;
   }

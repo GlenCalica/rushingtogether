@@ -1,7 +1,22 @@
 TODO
-- embed instagram posts
+- latest posts doesn't list most recent post (which is already featured at the top)
+- WP menus (bookmarked youtube tutorial)
+- WP menu search
+- learn about coffee culture (maybe custom taxonomy? If not, hard code page reference)
+
+
+FUTURE TODO
+- Styling for page and post (top heading top margin)
+- archive.php + styling
+- search.php (not official name) + styling
+- recommendations.php (probably just search.php for recommendations tags without the search bar) + styling
 
 DONE
+- post headline image (styling)
+- featured post
+- limit home page posts to 6
+- latest articles on front-page.php. it displays "Home" because it uses a WP Page (the page has the instagram feed)--the current WP Query is for the page "Home" and not the site in general. Potential fix is to change the query and use something other than have_posts()
+- embed instagram posts
 - fixed scrolling bug
 - restyle bottom logos (Follow Us)
 - removed commented css and js
