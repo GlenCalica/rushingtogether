@@ -13,7 +13,7 @@
         </div>
 
         <nav class="footer-nav">
-            <div class="nav-links">
+            <!-- <div class="nav-links">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Articles</a></li>
@@ -21,7 +21,18 @@
                     <li><a href="#">Recommendations</a></li>
                     <li><a href="#">Privacy</a></li>
                 </ul>
-            </div>
+            </div> -->
+
+
+            <?php wp_nav_menu(
+                array(
+                    'theme_location' => 'footer-menu',
+                    'container_class' => 'nav-links'
+                )
+            )
+            ?>
+
+
             <div class="socials">
                 <p class="social-title">Follow Us</p>
                 <a href="#"><img class="icon" src="<?php echo get_template_directory_uri() . "/assets/icons/instagram.svg"; ?>" alt="Instagram Icon"></a>

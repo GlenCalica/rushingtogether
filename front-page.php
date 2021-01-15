@@ -55,8 +55,9 @@
                     <a href="<?php echo get_permalink(); ?>">
                         <div class="aspect-ratio">
                             <div class="aspect-ratio-inside">
-                                <?php if (has_post_thumbnail()) : echo the_post_thumbnail();
-                                endif;  ?>
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <img src="<?php the_post_thumbnail_url('small'); ?>">
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class=" text">
@@ -90,8 +91,9 @@
                             <div class="aspect-ratio">
                                 <div class="aspect-ratio-inside">
                                     <div class="article-image">
-                                        <a href="<?php echo get_permalink(); ?>"><?php if (has_post_thumbnail()) : echo the_post_thumbnail();
-                                                                                    endif; ?></a>
+                                        <a href="<?php echo get_permalink(); ?>"><?php if (has_post_thumbnail()) : ?>
+                                                <img src="<?php the_post_thumbnail_url('small'); ?>">
+                                            <?php endif; ?></a>
                                     </div>
                                 </div>
                             </div>

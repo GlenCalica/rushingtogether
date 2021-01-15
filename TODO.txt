@@ -1,5 +1,4 @@
 TODO
-- WP menus (bookmarked youtube tutorial)
 - WP menu search
 
 FUTURE TODO
@@ -9,10 +8,19 @@ FUTURE TODO
 - recommendations.php (probably just search.php for recommendations tags without the search bar) + styling
 - Post tags
 
+TODO LAUNCH
+- Set up menus
+- Set "Instagram" page
+- Link Coffee Culture Posts
+
 DONE
-- learn about coffee culture
+- Linked Title in nav to home page 
+- WP menus (bookmarked youtube tutorial)
+- Added smaller post thumbnails
 
 PAST
+- learn about coffee culture
+
 - latest posts doesn't list most recent post (which is already featured at the top)
 - limit excerpt length
 
