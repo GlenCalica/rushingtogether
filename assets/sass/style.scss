@@ -141,26 +141,28 @@ nav.nav-top {
         font-size: 16px;
         font-weight: 700;
         margin: 10px;
+      }
+    }
+  }
 
-        .search {
-          margin-left: 20px;
-          form {
-            position: relative;
-            height: 44px;
-            width: 264px;
-            input {
-              position: absolute;
-              width: 200px;
-              height: 100%;
-            }
-            button {
-              position: absolute;
-              width: 44px;
-              height: 100%;
-              right: 0;
-            }
-          }
-        }
+  .search {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    form {
+      position: relative;
+      height: 44px;
+      width: 264px;
+      input {
+        position: absolute;
+        width: 200px;
+        height: 100%;
+      }
+      button {
+        position: absolute;
+        width: 44px;
+        height: 100%;
+        right: 0;
       }
     }
   }

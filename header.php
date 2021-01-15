@@ -33,14 +33,34 @@
                 </ul>
             </div> -->
 
+            <?php
+            $search_form = get_search_form(false);
 
-            <?php wp_nav_menu(
+            $search_form = '
+            <div class="search">
+                <form class="search-form">
+                    <input type="text" placeholder="Search . . .">
+                    <button class="btn-search">
+                        <img src="' . get_template_directory_uri() . '/assets/icons/icon-search.svg" alt="Search Icon">
+                    </button>
+                </form>
+            </div>
+            ';
+
+            $items_wrap = '<ul id="%1$s" class="%2$s">%3$s';
+            $items_wrap .= sprintf('<li id="searchItem">%1$s</li></ul>', $search_form);
+
+
+
+            wp_nav_menu(
                 array(
                     'theme_location' => 'top-menu',
-                    'container_class' => 'nav-bar'
+                    'container_class' => 'nav-bar',
+                    'items_wrap' => $items_wrap,
                 )
             )
             ?>
+
 
         </nav>
 

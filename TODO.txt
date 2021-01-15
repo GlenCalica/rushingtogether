@@ -1,5 +1,5 @@
 TODO
-- WP menu search
+- WP menu search bar functionality
 
 FUTURE TODO
 - Styling for page and post (top heading top margin)
@@ -7,6 +7,7 @@ FUTURE TODO
 - search.php (not official name) + styling
 - recommendations.php (probably just search.php for recommendations tags without the search bar) + styling
 - Post tags
+- Add Related Posts
 
 TODO LAUNCH
 - Set up menus
@@ -14,11 +15,13 @@ TODO LAUNCH
 - Link Coffee Culture Posts
 
 DONE
+- Added search bar to top menu
+
+PAST
 - Linked Title in nav to home page 
 - WP menus (bookmarked youtube tutorial)
 - Added smaller post thumbnails
 
-PAST
 - learn about coffee culture
 
 - latest posts doesn't list most recent post (which is already featured at the top)

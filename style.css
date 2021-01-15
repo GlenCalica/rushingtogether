@@ -139,20 +139,22 @@ nav.nav-top .nav-bar ul li {
   font-weight: 700;
   margin: 10px;
 }
-nav.nav-top .nav-bar ul li .search {
+nav.nav-top .search {
+  display: flex;
+  align-items: center;
   margin-left: 20px;
 }
-nav.nav-top .nav-bar ul li .search form {
+nav.nav-top .search form {
   position: relative;
   height: 44px;
   width: 264px;
 }
-nav.nav-top .nav-bar ul li .search form input {
+nav.nav-top .search form input {
   position: absolute;
   width: 200px;
   height: 100%;
 }
-nav.nav-top .nav-bar ul li .search form button {
+nav.nav-top .search form button {
   position: absolute;
   width: 44px;
   height: 100%;
