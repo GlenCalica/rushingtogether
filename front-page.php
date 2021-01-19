@@ -79,6 +79,8 @@
 
     <div class="article-container">
 
+        <hr>
+
         <?php query_posts('posts_per_page=7'); ?>
 
         <?php
@@ -127,16 +129,9 @@
     <h1>Instagram</h1>
 
     <?php
-    $args = array(
-        'post_type' => 'page',
-        'title' => 'Instagram'
-    );
-
-    $your_query = new WP_Query($args);
-    while ($your_query->have_posts()) : $your_query->the_post();
-        the_content();
-    endwhile;
+    echo do_shortcode('[instagram-feed]');
     ?>
+
 </section>
 
 <?php get_footer(); ?>

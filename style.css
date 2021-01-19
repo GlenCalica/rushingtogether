@@ -289,11 +289,6 @@ header p.read-more {
   text-align: right;
 }
 
-section.single {
-  margin: 40px 0 80px 0;
-  padding: 0 var(--body-padding);
-}
-
 section.learn {
   margin: 80px 0;
   padding: 0 var(--body-padding);
@@ -442,6 +437,11 @@ footer .ending-tag p {
   font-size: 10px;
 }
 
+section.single {
+  margin: 40px 0 80px 0;
+  padding: 0 var(--body-padding);
+}
+
 section.blog-post {
   line-height: 1.5rem;
 }
@@ -453,10 +453,20 @@ section.blog-post figure img {
   height: auto;
 }
 section.blog-post h1 {
-  height: 3rem;
+  line-height: 1;
+  display: inline-block;
 }
 section.blog-post img.post-thumbnail {
   width: 100%;
+}
+section.blog-post p.tags {
+  margin-top: 40px;
+}
+section.blog-post p.tags a {
+  background-color: var(--falu-red-light-2);
+  color: var(--falu-red);
+  font-weight: 700;
+  padding: 10px 20px;
 }
 
 @media only screen and (min-width: 500px) {
@@ -675,7 +685,7 @@ section.blog-post img.post-thumbnail {
 }
 @media only screen and (min-width: 1400px) {
   section.blog-post {
-    padding: 0 calc(var(--body-padding) * 1.5);
+    padding: 0 280px;
   }
 }
 @media only screen and (min-width: 1500px) {

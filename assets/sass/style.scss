@@ -313,11 +313,6 @@ header {
   }
 }
 
-section.single {
-  margin: 40px 0 80px 0;
-  padding: 0 var(--body-padding);
-}
-
 section.learn {
   margin: 80px 0;
   padding: 0 var(--body-padding);
@@ -486,6 +481,11 @@ footer {
 
 // sections not on front page
 
+section.single {
+  margin: 40px 0 80px 0;
+  padding: 0 var(--body-padding);
+}
+
 section.blog-post {
   line-height: 1.5rem;
 
@@ -499,11 +499,22 @@ section.blog-post {
   }
 
   h1 {
-    height: 3rem;
+    line-height: 1;
+    display: inline-block;
   }
 
   img.post-thumbnail {
     width: 100%;
+  }
+
+  p.tags {
+    margin-top: 40px;
+    a {
+      background-color: var(--falu-red-light-2);
+      color: var(--falu-red);
+      font-weight: 700;
+      padding: 10px 20px;
+    }
   }
 }
 
@@ -763,7 +774,7 @@ section.blog-post {
 
 @media only screen and (min-width: 1400px) {
   section.blog-post {
-    padding: 0 calc(var(--body-padding) * 1.5);
+    padding: 0 280px;
   }
 }
 

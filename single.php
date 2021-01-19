@@ -9,8 +9,13 @@
         <?php endif; ?>
 
         <?php the_content(); ?>
+
+        <p class="tags"><?php the_tags('', ' '); ?></p>
     </section>
 
-
 </section>
+<?php
+echo do_shortcode('[yarpp]');
+?>
+
 <?php get_footer(); ?>

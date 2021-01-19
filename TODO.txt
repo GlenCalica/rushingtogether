@@ -5,19 +5,23 @@ FUTURE TODO
 - archive.php + styling
 - search.php (not official name) + styling
 - recommendations.php (probably just search.php for recommendations tags without the search bar) + styling
-- Post tags
-- Add Related Posts
+- tag styling
 
 TODO LAUNCH
 - Set up menus
-- Set "Instagram" page
 - Link Coffee Culture Posts
+- Set up instagram feed plugin
+- Set up yarpp plugin
 
 DONE
+- Post tags
+- Add Related Posts
+- added do_shortcode('[instagram-feed]') to front-page
+
+PAST
 - Added search bar to top menu
 - Styling for page and post (top heading top margin)
 
-PAST
 - Linked Title in nav to home page 
 - WP menus (bookmarked youtube tutorial)
 - Added smaller post thumbnails
