@@ -2,7 +2,6 @@ TODO
 - WP menu search bar functionality
 
 FUTURE TODO
-- Styling for page and post (top heading top margin)
 - archive.php + styling
 - search.php (not official name) + styling
 - recommendations.php (probably just search.php for recommendations tags without the search bar) + styling
@@ -16,6 +15,7 @@ TODO LAUNCH
 
 DONE
 - Added search bar to top menu
+- Styling for page and post (top heading top margin)
 
 PAST
 - Linked Title in nav to home page 

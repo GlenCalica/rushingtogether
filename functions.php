@@ -31,3 +31,4 @@ register_nav_menus(
 );
 
 add_image_size('small', 520, 390, false);
+add_image_size('large', 900, 675, false);

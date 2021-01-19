@@ -290,7 +290,7 @@ header p.read-more {
 }
 
 section.single {
-  margin: 80px 0;
+  margin: 40px 0 80px 0;
   padding: 0 var(--body-padding);
 }
 
@@ -440,6 +440,23 @@ footer .ending-tag h2 {
 }
 footer .ending-tag p {
   font-size: 10px;
+}
+
+section.blog-post {
+  line-height: 1.5rem;
+}
+section.blog-post figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+section.blog-post figure img {
+  height: auto;
+}
+section.blog-post h1 {
+  height: 3rem;
+}
+section.blog-post img.post-thumbnail {
+  width: 100%;
 }
 
 @media only screen and (min-width: 500px) {
@@ -650,6 +667,15 @@ footer .ending-tag p {
 @media only screen and (min-width: 1100px) {
   :root {
     --body-padding: 10%;
+  }
+
+  section.blog-post {
+    padding: 0 var(--body-padding);
+  }
+}
+@media only screen and (min-width: 1400px) {
+  section.blog-post {
+    padding: 0 calc(var(--body-padding) * 1.5);
   }
 }
 @media only screen and (min-width: 1500px) {
