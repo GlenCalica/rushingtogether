@@ -573,6 +573,13 @@ section.blog-post {
   }
 }
 
+section.articles.archive {
+  margin-top: 40px;
+  .article-container {
+    margin-top: 0;
+  }
+}
+
 @media only screen and (min-width: 500px) {
   :root {
     --body-padding: 48px;

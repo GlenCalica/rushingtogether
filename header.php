@@ -37,8 +37,8 @@
             $search_form = get_search_form(false);
 
             $search_form = '
-            <div class="search" method="get" action="<?php echo home_url(); ?>">
-            <form class="search-form">
+            <div class="search">
+            <form class="search-form" method="get" action="' . home_url() . '">
                 <input type="text" name="s" placeholder="Search . . .">
                 <button type="submit" value="submit" class="btn-search">
                     <img src="' . get_template_directory_uri() . '/assets/icons/icon-search.svg" alt="Search Icon">

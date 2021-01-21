@@ -513,6 +513,13 @@ section.blog-post p.tags a {
   right: 0;
 }
 
+section.articles.archive {
+  margin-top: 40px;
+}
+section.articles.archive .article-container {
+  margin-top: 0;
+}
+
 @media only screen and (min-width: 500px) {
   :root {
     --body-padding: 48px;

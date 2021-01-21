@@ -23,7 +23,8 @@
             </div>
 
     <?php endwhile;
-    endif; ?>
+    endif;
+    wp_reset_query(); ?>
 </header>
 
 <section class="learn">
@@ -117,7 +118,8 @@
                 endif;
                 $i++;
             endwhile;
-        endif; ?>
+        endif;
+        wp_reset_query(); ?>
 
     </div>
 
