@@ -1,24 +1,33 @@
 TODO
-- WP menu search bar functionality
 
 FUTURE TODO
 - archive.php + styling
-- search.php (not official name) + styling
 - recommendations.php (probably just search.php for recommendations tags without the search bar) + styling
-- tag styling
+- BUG: Hamburger menu disappears on 320 width
+- BUG: yarpp shows multiple of the same related posts
+- pagination on archive.php, recommendations.php, and search.php
 
 TODO LAUNCH
 - Set up menus
 - Link Coffee Culture Posts
 - Set up instagram feed plugin
 - Set up yarpp plugin
+- Set up Search Exclude and Exclude all pages
+
 
 DONE
+- style search.php for everything larger than mobile
+- searchform.php styling
+- replace non-functional search forms
+
+PAST
+- search.php + mobile styling
+
+- tag styling
 - Post tags
 - Add Related Posts
 - added do_shortcode('[instagram-feed]') to front-page
 
-PAST
 - Added search bar to top menu
 - Styling for page and post (top heading top margin)
 

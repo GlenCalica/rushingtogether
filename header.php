@@ -37,17 +37,20 @@
             $search_form = get_search_form(false);
 
             $search_form = '
-            <div class="search">
-                <form class="search-form">
-                    <input type="text" placeholder="Search . . .">
-                    <button class="btn-search">
-                        <img src="' . get_template_directory_uri() . '/assets/icons/icon-search.svg" alt="Search Icon">
-                    </button>
-                </form>
+            <div class="search" method="get" action="<?php echo home_url(); ?>">
+            <form class="search-form">
+                <input type="text" name="s" placeholder="Search . . .">
+                <button type="submit" value="submit" class="btn-search">
+                    <img src="' . get_template_directory_uri() . '/assets/icons/icon-search.svg" alt="Search Icon">
+                </button>
+            </form>
             </div>
             ';
 
+            // $search_form = get_search_form();
+
             $items_wrap = '<ul id="%1$s" class="%2$s">%3$s';
+            // $items_wrap .= sprintf('<li id="searchItem">%1$s</li></ul>', $search_form);
             $items_wrap .= sprintf('<li id="searchItem">%1$s</li></ul>', $search_form);
 
 
@@ -89,12 +92,8 @@
 
 
                 <div class="bottom">
-                    <div class="search">
-                        <form class="search-form">
-                            <input type="text" placeholder="Search . . .">
-                            <button><img src="<?php echo get_template_directory_uri() . "/assets/icons/icon-search.svg"; ?>" alt="Search Icon"></button>
-                        </form>
-                    </div>
+
+                    <?php get_search_form(); ?>
 
                     <div class="socials">
                         <p class="social-title">Follow Us</p>
