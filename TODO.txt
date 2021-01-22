@@ -1,12 +1,14 @@
 TODO
-- recommendations.php (probably just search.php for recommendations tags without the search bar) + styling
 - pagination on recommendations.php, and search.php
 - All font colour black?
 - tag.php (maybe pull archive.php with tag search)
+- "More of Newest" button leads to articles
 
 BUGS
-- BUG: Hamburger menu disappears on 320 width
 - BUG: yarpp shows multiple of the same related posts
+
+Extra Features
+- Highlight colour related to colour scheme
 
 TODO LAUNCH
 - Set up menus
@@ -17,12 +19,16 @@ TODO LAUNCH
 
 
 DONE
+- recommendations.php (probably just search.php for recommendations tags without the search bar) + styling
+- search recommendations by tag
+- BUG: Hamburger menu disappears on 320 width
+
+PAST
 - archive.php + styling
 - pagination on archive.php
 - Deleted searchpage.php
 - BUG: search doesn't work on pages other than home and search
 
-PAST
 - style search.php for everything larger than mobile
 - searchform.php styling
 - replace non-functional search forms

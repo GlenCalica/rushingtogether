@@ -1,21 +1,26 @@
 <?php
 
 /**
- * Template Name: Archive Page
+ * Template Name: Recommendations Page
  *
  */
 ?>
 
 <?php get_header(); ?>
-
 <section class="articles archive">
-    <h1>Articles</h1>
+
+    <h1><?php the_title(); ?></h1>
+
+    <div class="content">
+        <?php the_content(); ?>
+    </div>
 
     <div class="article-container">
         <?php
 
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $args['paged'] = $paged;
+        $args['tag'] = 'recommendation';
         query_posts($args);
 
         ?>
@@ -54,7 +59,6 @@
 
 <?php endif;
         wp_reset_query(); ?>
-
 
 </section>
 

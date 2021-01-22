@@ -116,7 +116,7 @@ nav.nav-top {
   z-index: 4;
 }
 nav.nav-top h1 {
-  width: 300px;
+  width: 230px;
   font-size: 1rem;
 }
 nav.nav-top button {
@@ -236,6 +236,7 @@ nav.nav-top .search form button {
 }
 .mobile-menu .bottom .search form input {
   position: absolute;
+  padding: 0 10px;
   left: 0px;
   width: calc(100% - 64px);
   height: 100%;
@@ -518,6 +519,10 @@ section.articles.archive {
 }
 section.articles.archive .article-container {
   margin-top: 0;
+  margin-bottom: 0;
+}
+section.articles.archive .content {
+  margin-top: 36px;
 }
 
 @media only screen and (min-width: 500px) {
