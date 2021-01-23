@@ -751,6 +751,10 @@ section.articles.archive .content {
     border-top: 1px solid var(--falu-red-light-2);
   }
 
+  hr:last-of-type {
+    display: none;
+  }
+
   .no-results {
     height: 100px;
   }
@@ -811,7 +815,7 @@ section.articles.archive .content {
   }
 
   section.articles .article-container {
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   section.articles .article-container .article .text h1 {
     font-size: 1.5rem;

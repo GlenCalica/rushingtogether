@@ -855,6 +855,10 @@ section.articles.archive {
     }
   }
 
+  hr:last-of-type {
+    display: none;
+  }
+
   .no-results {
     height: 100px;
   }
@@ -922,7 +926,7 @@ section.articles.archive {
   }
 
   section.articles .article-container {
-    justify-content: space-between;
+    justify-content: flex-start;
     .article {
       .text h1 {
         font-size: 1.5rem;

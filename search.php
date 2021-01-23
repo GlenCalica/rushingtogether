@@ -12,23 +12,22 @@
 
     <?php get_search_form(); ?>
 
+    <p>Not finding what you're looking for? Try searching through our tags</p>
+
+    <?php
+
+    // $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    // $args['paged'] = $paged;
+    // query_posts($args);
+
+    query_posts('posts_per_page=10');
+
+    ?>
+
+
+
     <?php if (have_posts()) { ?>
 
-        <p>
-            <?php
-            printf(
-                esc_html(
-                    /* translators: %d: the number of search results. */
-                    _n(
-                        'We found %d result for your search.',
-                        'We found %d results for your search.',
-                        (int) $wp_query->found_posts,
-                    )
-                ),
-                (int) $wp_query->found_posts
-            );
-            ?>
-        </p>
         <div class="result-container">
 
             <?php while (have_posts()) {
@@ -59,8 +58,11 @@
                 <hr>
             <?php
 
-            }
-        } else { ?>
+            } ?>
+            <p><?php /* echo paginate_links(); */ ?></p>
+
+            <?php wp_reset_query();  ?>
+        <?php } else { ?>
             <div class="no-results">
                 <p>Sorry, but nothing matched your search terms. Please try again with some different keywords.</p>
             </div>

@@ -17,13 +17,13 @@ TODO LAUNCH
 - Set up yarpp plugin
 - Set up Search Exclude and Exclude all pages
 
-
 DONE
+
+PAST
 - recommendations.php (probably just search.php for recommendations tags without the search bar) + styling
 - search recommendations by tag
 - BUG: Hamburger menu disappears on 320 width
 
-PAST
 - archive.php + styling
 - pagination on archive.php
 - Deleted searchpage.php
