@@ -513,13 +513,23 @@ section.blog-post {
     width: 100%;
   }
 
-  p.tags {
+  div.tags {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 40px;
     a {
       background-color: var(--falu-red-light-2);
       color: var(--falu-red);
       font-weight: 700;
+      margin: 3px 6px;
+      margin-left: 0;
       padding: 10px 20px;
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+    a:hover {
+      background-color: var(--falu-red);
+      color: var(--white);
     }
   }
 }
@@ -582,6 +592,36 @@ section.articles.archive {
   }
   .content {
     margin-top: 36px;
+  }
+
+  ul.tags {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-top: 40px;
+    padding: 0;
+    li {
+      padding: 10px 0;
+      margin: 6px 0;
+      a {
+        background-color: var(--falu-red-light-2);
+        color: var(--falu-red);
+        font-weight: 700;
+        padding: 10px 20px;
+        margin: 0 6px;
+        transition: color 0.3s, background-color 0.3s;
+      }
+    }
+
+    li a:hover {
+      background-color: var(--falu-red);
+      color: var(--white);
+    }
+
+    li.current-tag a {
+      background-color: var(--falu-red);
+      color: var(--white);
+    }
   }
 }
 

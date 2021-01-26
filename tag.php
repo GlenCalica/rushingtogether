@@ -9,16 +9,26 @@
 <?php get_header(); ?>
 
 <section class="articles archive">
+
+
+
     <h1>Articles</h1>
-    <ul class="tags"><?php wp_list_categories(['taxonomy' => 'post_tag', 'title_li' => '',]) ?></ul>
+
+    <?php $tag = get_queried_object();
+    ?>
+
+    <ul class="tags">
+        <li class="current-tag"><a href="<?php echo get_permalink(get_page_by_title('articles')) ?>"><?php echo $tag->slug ?></a></li>
+        <?php wp_list_categories(['taxonomy' => 'post_tag', 'title_li' => '', 'exclude' => $tag->term_id,]) ?>
+    </ul>
 
     <div class="article-container">
         <?php
-
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $args['paged'] = $paged;
-        query_posts($args);
+        $args['tag'] = array($tag->slug);
 
+        query_posts($args);
         ?>
 
         <?php

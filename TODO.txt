@@ -1,7 +1,5 @@
 TODO
-- pagination on recommendations.php, and search.php
 - All font colour black?
-- tag.php (maybe pull archive.php with tag search)
 - "More of Newest" button leads to articles
 
 BUGS
@@ -18,8 +16,16 @@ TODO LAUNCH
 - Set up Search Exclude and Exclude all pages
 
 DONE
+- tag.php
+- list tags in article page
+- style current tag in tag.php differently
+- redirect curent tag to article page
+- BUG: fix post tags on smalll displays
 
 PAST
+- pagination on recommendations.php
+- search posts return 10 posts (no pagination)
+
 - recommendations.php (probably just search.php for recommendations tags without the search bar) + styling
 - search recommendations by tag
 - BUG: Hamburger menu disappears on 320 width

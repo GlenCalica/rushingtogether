@@ -465,14 +465,23 @@ section.blog-post h1 {
 section.blog-post img.post-thumbnail {
   width: 100%;
 }
-section.blog-post p.tags {
+section.blog-post div.tags {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 40px;
 }
-section.blog-post p.tags a {
+section.blog-post div.tags a {
   background-color: var(--falu-red-light-2);
   color: var(--falu-red);
   font-weight: 700;
+  margin: 3px 6px;
+  margin-left: 0;
   padding: 10px 20px;
+  transition: color 0.3s, background-color 0.3s;
+}
+section.blog-post div.tags a:hover {
+  background-color: var(--falu-red);
+  color: var(--white);
 }
 
 .result-container .result {
@@ -523,6 +532,33 @@ section.articles.archive .article-container {
 }
 section.articles.archive .content {
   margin-top: 36px;
+}
+section.articles.archive ul.tags {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-top: 40px;
+  padding: 0;
+}
+section.articles.archive ul.tags li {
+  padding: 10px 0;
+  margin: 6px 0;
+}
+section.articles.archive ul.tags li a {
+  background-color: var(--falu-red-light-2);
+  color: var(--falu-red);
+  font-weight: 700;
+  padding: 10px 20px;
+  margin: 0 6px;
+  transition: color 0.3s, background-color 0.3s;
+}
+section.articles.archive ul.tags li a:hover {
+  background-color: var(--falu-red);
+  color: var(--white);
+}
+section.articles.archive ul.tags li.current-tag a {
+  background-color: var(--falu-red);
+  color: var(--white);
 }
 
 @media only screen and (min-width: 500px) {

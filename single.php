@@ -10,7 +10,7 @@
 
         <?php the_content(); ?>
 
-        <p class="tags"><?php the_tags('', ' '); ?></p>
+        <div class="tags"><?php the_tags('', ' '); ?></div>
     </section>
 
 </section>
