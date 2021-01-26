@@ -13,16 +13,6 @@
         </div>
 
         <nav class="footer-nav">
-            <!-- <div class="nav-links">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Articles</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Recommendations</a></li>
-                    <li><a href="#">Privacy</a></li>
-                </ul>
-            </div> -->
-
 
             <?php wp_nav_menu(
                 array(
@@ -31,7 +21,6 @@
                 )
             )
             ?>
-
 
             <div class="socials">
                 <p class="social-title">Follow Us</p>
@@ -47,8 +36,6 @@
     </div>
 
 </footer>
-
-<!-- <script src="app.js"></script> -->
 </div>
 </body>
 

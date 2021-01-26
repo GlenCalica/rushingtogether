@@ -1,13 +1,14 @@
 TODO
 - BUG: yarpp shows multiple of the same related posts
-- highlight colour related to colour scheme
 - fix Slight spacing issues on all pages
-- clean code
 - minify Css
-
-BUGS
-
-Extra Features
+- contact form at the bottom
+- "learn about coffee culture" hover
+- accessibility check
+- maybe make black text lighter
+- make a test post with links, images, headings, etc
+- social media footer links
+- disable calica link (for now at least)
 
 TODO LAUNCH
 - Set up menus
@@ -17,6 +18,11 @@ TODO LAUNCH
 - Set up Search Exclude and Exclude all pages
 
 DONE
+- highlight colour related to colour scheme
+- added link to articles.php in search.php
+- clean code
+
+PAST
 - object fit cover on image thumbnails
 - opacity on image thumbnail hover
 - "More of Newest" hover style
@@ -26,7 +32,6 @@ DONE
 - changed article titles to h2 tags (from h1)
 - a:hover color transitions
 
-PAST
 - tag.php
 - list tags in article page
 - style current tag in tag.php differently

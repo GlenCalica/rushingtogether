@@ -10,12 +10,9 @@
 
 <section class="articles archive">
 
-
-
     <h1>Articles</h1>
 
-    <?php $tag = get_queried_object();
-    ?>
+    <?php $tag = get_queried_object(); ?>
 
     <ul class="tags">
         <li class="current-tag"><a href="<?php echo get_permalink(get_page_by_title('articles')) ?>"><?php echo $tag->slug ?></a></li>
@@ -65,7 +62,6 @@
 
 <?php endif;
         wp_reset_query(); ?>
-
 
 </section>
 

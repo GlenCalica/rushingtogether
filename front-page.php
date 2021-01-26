@@ -25,6 +25,7 @@
     <?php endwhile;
     endif;
     wp_reset_query(); ?>
+
 </header>
 
 <section class="learn">
@@ -72,6 +73,7 @@
             endwhile;
         }
         ?>
+
     </div>
 </section>
 
@@ -133,7 +135,6 @@
     <?php
     echo do_shortcode('[instagram-feed]');
     ?>
-
 </section>
 
 <?php get_footer(); ?>

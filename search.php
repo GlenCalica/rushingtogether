@@ -12,19 +12,9 @@
 
     <?php get_search_form(); ?>
 
-    <p>Not finding what you're looking for? Try searching through our tags</p>
+    <p>Not finding what you're looking for? Try searching through our <a href="<?php echo get_permalink(get_page_by_title('articles')) ?>">tags</a></p>
 
-    <?php
-
-    // $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-    // $args['paged'] = $paged;
-    // query_posts($args);
-
-    query_posts('posts_per_page=10');
-
-    ?>
-
-
+    <?php query_posts('posts_per_page=10'); ?>
 
     <?php if (have_posts()) { ?>
 
@@ -59,12 +49,9 @@
                 </div>
                 <hr>
             <?php
-
-            } ?>
-            <p><?php /* echo paginate_links(); */ ?></p>
-
-            <?php wp_reset_query();  ?>
-        <?php } else { ?>
+            }
+            wp_reset_query();
+        } else { ?>
             <div class="no-results">
                 <p>Sorry, but nothing matched your search terms. Please try again with some different keywords.</p>
             </div>
