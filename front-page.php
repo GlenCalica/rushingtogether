@@ -104,7 +104,7 @@
 
                         <div class=" text">
                             <a href="<?php echo get_permalink(); ?>">
-                                <h1><?php the_title(); ?></h1>
+                                <h2><?php the_title(); ?></h2>
                             </a>
                             <div class="excerpt">
                                 <p class="excerpt"><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>
@@ -123,7 +123,7 @@
 
     </div>
 
-    <div class="btn"><button>More of Newest</button></div>
+    <div class="btn"><a href="<?php echo get_permalink(get_page_by_title('articles')) ?>"><button>More of Newest</button></a></div>
 
 </section>
 

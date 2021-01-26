@@ -35,13 +35,15 @@
             ?>
                 <div class="result">
                     <div class="image-container">
-                        <div class="aspect-ratio">
-                            <div class="aspect-ratio-inside">
-                                <a href="<?php echo get_permalink(); ?>"><?php if (has_post_thumbnail()) : ?>
+                        <a href="<?php echo get_permalink(); ?>"><?php if (has_post_thumbnail()) : ?>
+                                <div class="aspect-ratio">
+                                    <div class="aspect-ratio-inside">
+
                                         <img src="<?php the_post_thumbnail_url('small'); ?>">
-                                    <?php endif; ?></a>
-                            </div>
-                        </div>
+                                    <?php endif; ?>
+                                    </div>
+                                </div>
+                        </a>
                     </div>
                     <div class="text">
                         <a href="<?php echo get_permalink(); ?>">

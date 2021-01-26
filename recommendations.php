@@ -43,7 +43,7 @@
 
                     <div class=" text">
                         <a href="<?php echo get_permalink(); ?>">
-                            <h1><?php the_title(); ?></h1>
+                            <h2><?php the_title(); ?></h2>
                         </a>
                         <div class="excerpt">
                             <p class="excerpt"><?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?></p>

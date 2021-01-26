@@ -1,12 +1,13 @@
 TODO
-- All font colour black?
-- "More of Newest" button leads to articles
+- BUG: yarpp shows multiple of the same related posts
+- highlight colour related to colour scheme
+- fix Slight spacing issues on all pages
+- clean code
+- minify Css
 
 BUGS
-- BUG: yarpp shows multiple of the same related posts
 
 Extra Features
-- Highlight colour related to colour scheme
 
 TODO LAUNCH
 - Set up menus
@@ -16,13 +17,22 @@ TODO LAUNCH
 - Set up Search Exclude and Exclude all pages
 
 DONE
+- object fit cover on image thumbnails
+- opacity on image thumbnail hover
+- "More of Newest" hover style
+- "More of Newest" button leads to articles
+- cursor pointer on buttons
+- navbar h1 smaller for visual heirarchy
+- changed article titles to h2 tags (from h1)
+- a:hover color transitions
+
+PAST
 - tag.php
 - list tags in article page
 - style current tag in tag.php differently
 - redirect curent tag to article page
 - BUG: fix post tags on smalll displays
 
-PAST
 - pagination on recommendations.php
 - search posts return 10 posts (no pagination)
 

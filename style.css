@@ -4,6 +4,7 @@ Author: Glen Calica
 */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap");
 :root {
+  --falu-red-hover: #ae4141;
   --falu-red: #821515;
   --falu-red-light-1: #efe5e4;
   --falu-red-light-2: #e8d5d4;
@@ -38,8 +39,12 @@ h4,
 h5 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  color: var(--falu-red);
   margin: var(--text-margin) 0;
+  color: var(--falu-red);
+}
+
+h1 {
+  color: var(--falu-red);
 }
 
 img {
@@ -48,8 +53,11 @@ img {
 }
 
 p {
-  color: var(--falu-red);
   margin: var(--text-margin) 0;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .excerpt {
@@ -114,6 +122,12 @@ nav.nav-top {
   width: calc(100% - (var(--body-padding) * 2));
   background-color: var(--white);
   z-index: 4;
+}
+nav.nav-top a {
+  transition: color 0.3s;
+}
+nav.nav-top a:hover {
+  color: var(--falu-red-hover);
 }
 nav.nav-top h1 {
   width: 230px;
@@ -191,6 +205,11 @@ nav.nav-top .search form button {
   right: -100%;
   transition: right 0.3s ease-in-out;
   z-index: 10;
+}
+.mobile-menu a,
+.mobile-menu p,
+.mobile-menu h2 {
+  color: var(--falu-red);
 }
 .mobile-menu .heading {
   position: relative;
@@ -281,6 +300,16 @@ header {
   margin-bottom: 80px;
   padding: 0 var(--body-padding);
 }
+header a,
+header p {
+  color: var(--falu-red);
+}
+header a {
+  transition: color 0.3s;
+}
+header a:hover {
+  color: var(--falu-red-hover);
+}
 header .image-container {
   width: 100%;
 }
@@ -301,6 +330,10 @@ section.learn {
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: var(--falu-red-light-1);
+}
+section.learn h2,
+section.learn p {
+  color: var(--falu-red);
 }
 section.learn img {
   width: 100%;
@@ -337,15 +370,25 @@ section.articles .article-container .article .article-image {
   height: 100%;
 }
 section.articles .article-container .article .article-image img {
+  object-fit: cover;
   width: 100%;
   height: 100%;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+section.articles .article-container .article .article-image img:hover {
+  opacity: 0.85;
 }
 section.articles .article-container .article .text {
   width: 40%;
 }
-section.articles .article-container .article .text h1 {
+section.articles .article-container .article .text h2 {
   font-size: 16px;
   text-align: center;
+  transition: color 0.3s;
+}
+section.articles .article-container .article .text h2:hover {
+  color: var(--falu-red-hover);
 }
 section.articles .article-container hr {
   margin: 15px 0;
@@ -362,6 +405,11 @@ section.articles button {
   text-align: center;
   border: 0;
   padding: 10px 20px;
+  transition: color 0.3s, background-color 0.3s;
+}
+section.articles button:hover {
+  background-color: var(--falu-red);
+  color: var(--white);
 }
 
 section.instagram {
@@ -389,6 +437,11 @@ footer {
   padding-top: 40px;
   padding-bottom: 80px;
 }
+footer a,
+footer p,
+footer h2 {
+  color: var(--falu-red);
+}
 footer h1 {
   font-size: 1rem;
   width: 40px;
@@ -400,6 +453,12 @@ footer p {
 footer nav.footer-nav {
   display: flex;
   padding: 0;
+}
+footer nav.footer-nav a {
+  transition: color 0.3s;
+}
+footer nav.footer-nav a:hover {
+  color: var(--falu-red-hover);
 }
 footer nav.footer-nav .nav-links {
   width: 60%;
@@ -487,11 +546,24 @@ section.blog-post div.tags a:hover {
 .result-container .result {
   margin: 36px 0;
 }
+.result-container .result a,
+.result-container .result h2 {
+  transition: color 0.3s;
+}
+.result-container .result h2:hover,
+.result-container .result a:hover {
+  color: var(--falu-red-hover);
+}
 .result-container .result .image-container {
   display: none;
 }
 .result-container .result .text .excerpt {
   display: inline;
+}
+.result-container .result img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .result-container hr {
   border-top: 1px solid var(--falu-red-light-2);
@@ -598,7 +670,7 @@ section.articles.archive ul.tags li.current-tag a {
     padding: 5px 10px;
   }
 
-  section.articles .article-container .article .text h1 {
+  section.articles .article-container .article .text h2 {
     font-size: 20px;
   }
 
@@ -660,7 +732,7 @@ section.articles.archive ul.tags li.current-tag a {
     width: 90%;
     text-align: center;
   }
-  section.articles .article-container .article .text h1 {
+  section.articles .article-container .article .text h2 {
     font-size: 1rem;
   }
   section.articles .article-container hr {
@@ -817,10 +889,6 @@ section.articles.archive ul.tags li.current-tag a {
   nav.nav-top .nav-bar ul li {
     font-size: 1rem;
   }
-  nav.nav-top h1 {
-    font-size: 2rem;
-    width: 500px;
-  }
 
   .excerpt {
     font-size: 1rem;
@@ -853,7 +921,7 @@ section.articles.archive ul.tags li.current-tag a {
   section.articles .article-container {
     justify-content: flex-start;
   }
-  section.articles .article-container .article .text h1 {
+  section.articles .article-container .article .text h2 {
     font-size: 1.5rem;
   }
 

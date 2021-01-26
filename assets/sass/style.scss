@@ -6,6 +6,7 @@ Author: Glen Calica
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap");
 
 :root {
+  --falu-red-hover: #ae4141;
   --falu-red: #821515;
   --falu-red-light-1: #efe5e4;
   --falu-red-light-2: #e8d5d4;
@@ -40,8 +41,12 @@ h4,
 h5 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  color: var(--falu-red);
   margin: var(--text-margin) 0;
+  color: var(--falu-red);
+}
+
+h1 {
+  color: var(--falu-red);
 }
 
 img {
@@ -50,8 +55,11 @@ img {
 }
 
 p {
-  color: var(--falu-red);
   margin: var(--text-margin) 0;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .excerpt {
@@ -116,6 +124,14 @@ nav.nav-top {
   background-color: var(--white);
   z-index: 4;
 
+  a {
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: var(--falu-red-hover);
+  }
+
   h1 {
     width: 230px;
     font-size: 1rem;
@@ -126,12 +142,17 @@ nav.nav-top {
     background-color: var(--white);
   }
 
+  // button:hover {
+  //   cursor: pointer;
+  // }
+
   button.btn-search {
     background-color: var(--falu-red);
   }
 
   .nav-bar {
     display: none;
+
     ul {
       display: flex;
       justify-content: flex-end;
@@ -198,6 +219,12 @@ nav.nav-top {
   right: -100%;
   transition: right 0.3s ease-in-out;
   z-index: 10;
+
+  a,
+  p,
+  h2 {
+    color: var(--falu-red);
+  }
 
   .heading {
     position: relative;
@@ -301,6 +328,19 @@ header {
   margin-bottom: 80px;
   padding: 0 var(--body-padding);
 
+  a,
+  p {
+    color: var(--falu-red);
+  }
+
+  a {
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: var(--falu-red-hover);
+  }
+
   .image-container {
     width: 100%;
   }
@@ -325,6 +365,11 @@ section.learn {
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: var(--falu-red-light-1);
+
+  h2,
+  p {
+    color: var(--falu-red);
+  }
 
   img {
     width: 100%;
@@ -364,15 +409,27 @@ section.articles {
         width: 100%;
         height: 100%;
         img {
+          object-fit: cover;
           width: 100%;
           height: 100%;
+          opacity: 1;
+          transition: opacity 0.5s;
+        }
+
+        img:hover {
+          opacity: 0.85;
         }
       }
       .text {
         width: 40%;
-        h1 {
+        h2 {
           font-size: 16px;
           text-align: center;
+          transition: color 0.3s;
+        }
+
+        h2:hover {
+          color: var(--falu-red-hover);
         }
       }
     }
@@ -387,6 +444,7 @@ section.articles {
     display: flex;
     justify-content: center;
   }
+
   button {
     background-color: var(--falu-red-light-2);
     color: var(--falu-red);
@@ -394,6 +452,13 @@ section.articles {
     text-align: center;
     border: 0;
     padding: 10px 20px;
+    transition: color 0.3s, background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: var(--falu-red);
+    color: var(--white);
+    // cursor: pointer;
   }
 }
 
@@ -425,6 +490,12 @@ footer {
   padding-top: 40px;
   padding-bottom: 80px;
 
+  a,
+  p,
+  h2 {
+    color: var(--falu-red);
+  }
+
   h1 {
     font-size: 1rem;
     width: 40px;
@@ -438,6 +509,15 @@ footer {
   nav.footer-nav {
     display: flex;
     padding: 0;
+
+    a {
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: var(--falu-red-hover);
+    }
+
     .nav-links {
       width: 60%;
       ul {
@@ -538,6 +618,16 @@ section.blog-post {
   .result {
     margin: 36px 0;
 
+    a,
+    h2 {
+      transition: color 0.3s;
+    }
+
+    h2:hover,
+    a:hover {
+      color: var(--falu-red-hover);
+    }
+
     .image-container {
       display: none;
     }
@@ -546,6 +636,12 @@ section.blog-post {
       .excerpt {
         display: inline;
       }
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
   }
 
@@ -667,7 +763,7 @@ section.articles.archive {
   }
 
   section.articles .article-container .article {
-    .text h1 {
+    .text h2 {
       font-size: 20px;
     }
   }
@@ -739,7 +835,7 @@ section.articles.archive {
       .text {
         width: 90%;
         text-align: center;
-        h1 {
+        h2 {
           font-size: 1rem;
         }
       }
@@ -928,10 +1024,6 @@ section.articles.archive {
     .nav-bar ul li {
       font-size: 1rem;
     }
-    h1 {
-      font-size: 2rem;
-      width: 500px;
-    }
   }
 
   .excerpt {
@@ -968,7 +1060,7 @@ section.articles.archive {
   section.articles .article-container {
     justify-content: flex-start;
     .article {
-      .text h1 {
+      .text h2 {
         font-size: 1.5rem;
       }
     }
