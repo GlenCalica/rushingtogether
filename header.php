@@ -71,7 +71,7 @@
 
                     <div class="ending-tag">
                         <h2> <span>©</span> 2021 Rushing Together</h2>
-                        <p>Made by <a href="#">Calica</a></p>
+                        <p>Made by Glen Calica</p>
                     </div>
                 </div>
             </div>
