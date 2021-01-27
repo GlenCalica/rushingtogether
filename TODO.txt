@@ -1,8 +1,7 @@
 TODO
-- BUG: Search doesn't work
-- BUG: yarpp shows multiple of the same related posts
 - accessibility check
 - minify Css
+- learn about coffee culture related posts point to each other (I don't know if this possible) 
 
 TODO LAUNCH
 - Set up menus
@@ -12,11 +11,14 @@ TODO LAUNCH
 - Set up Search Exclude and Exclude all pages
 
 DONE
+- BUG: yarpp shows multiple of the same related posts
+- BUG: Search doesn't work
+
+PAST
 - fix Slight spacing issues on all pages
 - removed contact form
 - added instagram footer link & removed fb icon
 
-PAST
 - "learn about coffee culture" hover
 - make black text lighter
 - adjust text selection color

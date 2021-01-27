@@ -1,8 +1,8 @@
 <?php
 /*
 YARPP Template: Related Posts
-Description: For rushingtogether
 Author: Glen Calica
+Description: For rushingtogether
 */ ?>
 <section class="articles">
     <h1>Related Articles</h1>
@@ -10,8 +10,6 @@ Author: Glen Calica
     <div class="article-container">
 
         <hr>
-
-        <?php query_posts('posts_per_page=3'); ?>
 
         <?php
         if (have_posts()) : while (have_posts()) : the_post(); ?>

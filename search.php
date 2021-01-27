@@ -14,14 +14,20 @@
 
     <p>Not finding what you're looking for? Try searching through our <a href="<?php echo get_permalink(get_page_by_title('articles')) ?>">tags</a></p>
 
-    <?php query_posts('posts_per_page=10'); ?>
+    <?php
 
-    <?php if (have_posts()) { ?>
+    $s = get_search_query();
+    $args = array('s' => $s);
+    $search_query = new WP_Query($args);
+
+    query_posts('posts_per_page=10');
+
+    if ($search_query->have_posts()) { ?>
 
         <div class="result-container">
 
-            <?php while (have_posts()) {
-                the_post();
+            <?php while ($search_query->have_posts()) {
+                $search_query->the_post();
             ?>
                 <div class="result">
                     <div class="image-container">
