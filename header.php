@@ -65,8 +65,7 @@
 
                     <div class="socials">
                         <p class="social-title">Follow Us</p>
-                        <a href="#"><img class="icon" src="<?php echo get_template_directory_uri() . "/assets/icons/instagram.svg"; ?>" alt="Instagram Icon"></a>
-                        <a href="#"><img class="icon" src="<?php echo get_template_directory_uri() . "/assets/icons/facebook.svg"; ?>" alt="Facebook Icon"></a>
+                        <a href="https://www.instagram.com/rushingtogether/" target="_blank"><img class="icon" src="<?php echo get_template_directory_uri() . "/assets/icons/instagram.svg"; ?>" alt="Instagram Icon"></a>
                     </div>
 
                     <div class="ending-tag">

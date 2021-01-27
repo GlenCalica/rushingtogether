@@ -20,7 +20,7 @@ Description: For rushingtogether
                             <div class="aspect-ratio-inside">
                                 <div class="article-image">
                                     <a href="<?php echo get_permalink(); ?>"><?php if (has_post_thumbnail()) : ?>
-                                            <img src="<?php the_post_thumbnail_url('small'); ?>">
+                                            <?php echo the_post_thumbnail(); ?>
                                         <?php endif; ?></a>
                                 </div>
                             </div>

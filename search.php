@@ -35,7 +35,7 @@
                                 <div class="aspect-ratio">
                                     <div class="aspect-ratio-inside">
 
-                                        <img src="<?php the_post_thumbnail_url('small'); ?>">
+                                        <?php echo the_post_thumbnail(); ?>
                                     <?php endif; ?>
                                     </div>
                                 </div>

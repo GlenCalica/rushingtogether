@@ -34,7 +34,18 @@
                             <div class="aspect-ratio-inside">
                                 <div class="article-image">
                                     <a href="<?php echo get_permalink(); ?>"><?php if (has_post_thumbnail()) : ?>
-                                            <img src="<?php the_post_thumbnail_url('small'); ?>">
+                                            <?php
+                                                                                    $thumb_id = get_post_thumbnail_id(get_the_ID());
+                                                                                    $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+                                                                                    if ($alt) :
+                                            ?>
+                                                <img src="<?php the_post_thumbnail_url('small'); ?>" alt="<?php echo $alt; ?>">
+
+                                            <?php else : ?>
+                                                <img src="<?php the_post_thumbnail_url('small'); ?>">
+                                            <?php endif;
+                                            ?>
+
                                         <?php endif; ?></a>
                                 </div>
                             </div>

@@ -1,7 +1,16 @@
 TODO
-- accessibility check
+- Check site on different browsers
+    - Edge
+    - Internet Exporer
+    - Firefox
 - minify Css
 - learn about coffee culture related posts point to each other (I don't know if this possible) 
+
+LIGHTHOUSE REPORT (DESKTOP)
+- Performance: 77 (Probably because the site is running through Local)
+- Accessibility: 98 (Missing 2 points because of WordPress Header)
+- Best Practices: 79 (Probably because the site is running locally)
+- SEO: 90 (No meta description. Install Yeost SEO)
 
 TODO LAUNCH
 - Set up menus
@@ -11,10 +20,13 @@ TODO LAUNCH
 - Set up Search Exclude and Exclude all pages
 
 DONE
+- Finished accessibility check
+- Added alt text functionality to images
+
+PAST
 - BUG: yarpp shows multiple of the same related posts
 - BUG: Search doesn't work
 
-PAST
 - fix Slight spacing issues on all pages
 - removed contact form
 - added instagram footer link & removed fb icon
