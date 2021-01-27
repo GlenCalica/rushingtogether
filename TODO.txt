@@ -1,9 +1,7 @@
 TODO
+- BUG: Search doesn't work
 - BUG: yarpp shows multiple of the same related posts
-- contact form at the bottom
-- fix Slight spacing issues on all pages
 - accessibility check
-- social media footer links
 - minify Css
 
 TODO LAUNCH
@@ -14,6 +12,11 @@ TODO LAUNCH
 - Set up Search Exclude and Exclude all pages
 
 DONE
+- fix Slight spacing issues on all pages
+- removed contact form
+- added instagram footer link & removed fb icon
+
+PAST
 - "learn about coffee culture" hover
 - make black text lighter
 - adjust text selection color
@@ -22,7 +25,6 @@ DONE
 - fixed selection highlight
 - added hover transition to header image
 
-PAST
 - highlight colour related to colour scheme
 - added link to articles.php in search.php
 - clean code

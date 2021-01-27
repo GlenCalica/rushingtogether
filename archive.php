@@ -37,7 +37,7 @@
                         </div>
                     </div>
 
-                    <div class=" text">
+                    <div class="text">
                         <a href="<?php echo get_permalink(); ?>">
                             <h2><?php the_title(); ?></h2>
                         </a>
@@ -51,7 +51,7 @@
 
             <?php endwhile; ?>
     </div>
-    <p><?php echo paginate_links(); ?></p>
+    <div class="pagination-links"><?php echo paginate_links(); ?></div>
 
 <?php endif;
         wp_reset_query(); ?>

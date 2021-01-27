@@ -374,9 +374,6 @@ section.articles {
   margin: 80px 0;
   padding: 0 var(--body-padding);
 }
-section.articles .article-container {
-  margin: 50px 0;
-}
 section.articles .article-container .article {
   display: flex;
   justify-content: space-between;
@@ -409,7 +406,7 @@ section.articles .article-container .article .text h2 {
 section.articles .article-container .article .text h2:hover {
   color: var(--falu-red-hover);
 }
-section.articles .article-container hr {
+section.articles .article-container .article hr {
   margin: 15px 0;
   border-top: 1px solid var(--falu-red-light-2);
 }
@@ -435,26 +432,15 @@ section.instagram {
   margin: 80px 0;
   padding: 0 var(--body-padding);
 }
-section.instagram .image-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 50px 0;
-}
-section.instagram .image-container .image {
-  width: 46%;
-  height: auto;
-  margin: 2% 2%;
-}
-section.instagram .image-container img {
-  width: 100%;
-  height: 100%;
+section.instagram #sb_instagram {
+  margin-top: 30px;
 }
 
 footer {
   background-color: var(--falu-red-light-1);
   padding: 0 var(--body-padding);
   padding-top: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 footer a,
 footer p,
@@ -541,6 +527,7 @@ section.blog-post h1 {
   display: inline-block;
 }
 section.blog-post img.post-thumbnail {
+  margin: 30px 0;
   width: 100%;
 }
 section.blog-post div.tags {
@@ -650,6 +637,9 @@ section.articles.archive ul.tags li a:hover {
 section.articles.archive ul.tags li.current-tag a {
   background-color: var(--falu-red);
   color: var(--white);
+}
+section.articles.archive .pagination-links {
+  text-align: center;
 }
 
 @media only screen and (min-width: 500px) {
@@ -810,7 +800,7 @@ section.articles.archive ul.tags li.current-tag a {
 
   section.articles .article-container .article {
     width: 31%;
-    margin: 4% 1%;
+    margin: 2% 1%;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -829,25 +819,6 @@ section.articles.archive ul.tags li.current-tag a {
   footer h1 {
     font-size: 2rem;
     width: 100%;
-  }
-  footer .footer-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-  footer .footer-menu .subscribe {
-    width: 50%;
-    margin-top: 0;
-  }
-  footer .footer-menu .subscribe p {
-    margin-top: 13px;
-  }
-  footer .footer-menu .footer-nav {
-    width: 45%;
-    margin-top: 0;
-  }
-  footer .footer-menu .footer-nav .nav-links {
-    order: 2;
   }
   footer .footer-menu .footer-nav .socials img.icon {
     height: 30px;
