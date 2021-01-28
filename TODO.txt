@@ -1,10 +1,4 @@
 TODO
-- Check site on different browsers
-    - Edge
-    - Internet Exporer
-    - Firefox
-- minify Css
-- learn about coffee culture related posts point to each other (I don't know if this possible) 
 
 LIGHTHOUSE REPORT (DESKTOP)
 - Performance: 77 (Probably because the site is running through Local)
@@ -20,10 +14,19 @@ TODO LAUNCH
 - Set up Search Exclude and Exclude all pages
 
 DONE
+- minify Css
+- Check site on different browsers
+    - Edge
+    - Firefox
+- fixed title spacing on Firefox
+- fixed hr on Firefox
+- fixed nav spacing from 1100px - 1300px
+- added hover animation on search images
+
+PAST
 - Finished accessibility check
 - Added alt text functionality to images
 
-PAST
 - BUG: yarpp shows multiple of the same related posts
 - BUG: Search doesn't work
 

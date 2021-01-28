@@ -137,7 +137,6 @@ nav.nav-top a:hover {
   color: var(--falu-red-hover);
 }
 nav.nav-top h1 {
-  width: 230px;
   font-size: 1rem;
 }
 nav.nav-top button {
@@ -409,7 +408,7 @@ section.articles .article-container .article .text h2:hover {
 }
 section.articles .article-container .article hr {
   margin: 15px 0;
-  border-top: 1px solid var(--falu-red-light-2);
+  border: 1px solid var(--falu-red-light-2);
 }
 section.articles .btn {
   display: flex;
@@ -568,12 +567,17 @@ section.blog-post div.tags a:hover {
   display: inline;
 }
 .result-container .result img {
-  height: 100%;
-  width: 100%;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.result-container .result img:hover {
+  opacity: 0.85;
 }
 .result-container hr {
-  border-top: 1px solid var(--falu-red-light-2);
+  border: 1px solid var(--falu-red-light-2);
 }
 
 .single .search {
@@ -860,11 +864,16 @@ section.articles.archive .pagination-links {
 }
 @media only screen and (min-width: 1100px) {
   :root {
-    --body-padding: 10%;
+    --body-padding: 5%;
   }
 
   section.blog-post {
     padding: 0 var(--body-padding);
+  }
+}
+@media only screen and (min-width: 1250px) {
+  :root {
+    --body-padding: 10%;
   }
 }
 @media only screen and (min-width: 1400px) {

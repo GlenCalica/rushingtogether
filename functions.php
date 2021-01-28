@@ -4,7 +4,7 @@ function load_stylesheets()
     wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), false, 'all');
     wp_enqueue_style('normalize');
 
-    wp_register_style('style', get_template_directory_uri() . '/style.css', array(), false, 'all');
+    wp_register_style('style', get_template_directory_uri() . '/style.min.css', array(), false, 'all');
     wp_enqueue_style('style');
 }
 
