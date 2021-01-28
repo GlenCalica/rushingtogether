@@ -58,7 +58,7 @@
 
             <?php endwhile; ?>
     </div>
-    <p><?php echo paginate_links(); ?></p>
+    <div class="pagination-links"><?php echo paginate_links(); ?></div>
 
 <?php endif;
         wp_reset_query(); ?>

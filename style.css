@@ -61,6 +61,7 @@ img {
 p {
   margin: var(--text-margin) 0;
   color: var(--black);
+  font-size: 1.01rem;
 }
 
 button:hover {
@@ -696,7 +697,7 @@ section.articles.archive .pagination-links {
     font-size: 1.4rem;
   }
   footer p {
-    font-size: 1rem;
+    font-size: 1.01rem;
   }
   footer nav.footer-nav .nav-links ul li {
     font-size: 1rem;
@@ -796,6 +797,10 @@ section.articles.archive .pagination-links {
     width: 23%;
     margin: 1% 1%;
   }
+
+  section.blog-post {
+    padding: 0 8%;
+  }
 }
 @media only screen and (min-width: 1000px) {
   section.learn .card-container .card {
@@ -868,7 +873,7 @@ section.articles.archive .pagination-links {
   }
 
   section.blog-post {
-    padding: 0 var(--body-padding);
+    padding: 0 16%;
   }
 }
 @media only screen and (min-width: 1250px) {
@@ -878,7 +883,7 @@ section.articles.archive .pagination-links {
 }
 @media only screen and (min-width: 1400px) {
   section.blog-post {
-    padding: 0 280px;
+    padding: 0 24%;
   }
 }
 @media only screen and (min-width: 1500px) {
@@ -891,7 +896,7 @@ section.articles.archive .pagination-links {
   }
 
   .excerpt {
-    font-size: 1rem;
+    font-size: 1.01rem;
   }
 
   header {

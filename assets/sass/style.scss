@@ -63,6 +63,7 @@ img {
 p {
   margin: var(--text-margin) 0;
   color: var(--black);
+  font-size: 1.01rem;
 }
 
 button:hover {
@@ -789,7 +790,7 @@ section.articles.archive {
     }
 
     p {
-      font-size: 1rem;
+      font-size: 1.01rem;
     }
 
     nav.footer-nav .nav-links ul li {
@@ -908,6 +909,10 @@ section.articles.archive {
     width: 23%;
     margin: 1% 1%;
   }
+
+  section.blog-post {
+    padding: 0 8%;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -993,7 +998,7 @@ section.articles.archive {
     --body-padding: 5%;
   }
   section.blog-post {
-    padding: 0 var(--body-padding);
+    padding: 0 16%;
   }
 }
 
@@ -1005,7 +1010,7 @@ section.articles.archive {
 
 @media only screen and (min-width: 1400px) {
   section.blog-post {
-    padding: 0 280px;
+    padding: 0 24%;
   }
 }
 
@@ -1021,7 +1026,7 @@ section.articles.archive {
   }
 
   .excerpt {
-    font-size: 1rem;
+    font-size: 1.01rem;
   }
 
   header {
