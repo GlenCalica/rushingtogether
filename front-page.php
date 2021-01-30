@@ -83,8 +83,6 @@
 
     <div class="article-container">
 
-        <hr>
-
         <?php query_posts('posts_per_page=7'); ?>
 
         <?php

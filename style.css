@@ -6,7 +6,6 @@ Description: A Custom Theme for Rushing Together
 Version: 1.0
 Text Domain: Rushing Together
 */
-
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap");
 :root {
   --black: #4a4a4a;
@@ -77,13 +76,11 @@ button:hover {
   display: none;
 }
 
-.email,
 .search {
   display: flex;
   justify-content: flex-start;
   width: 100%;
 }
-.email input,
 .search input {
   font-size: 12px;
   height: 34px;
@@ -91,17 +88,14 @@ button:hover {
   padding-left: 10px;
   border: 0;
 }
-.email input::placeholder,
 .search input::placeholder {
   color: var(--falu-red);
   font-weight: 700;
 }
-.email input[type="text"],
-.search input[type="text"] {
+.search input[type=text] {
   font-weight: 700;
   color: var(--falu-red);
 }
-.email button,
 .search button {
   background-color: var(--falu-red);
   color: var(--white);
@@ -109,6 +103,13 @@ button:hover {
   font-size: 12px;
   width: 30%;
   border: 0;
+}
+.search button.btn-search {
+  background-color: var(--falu-red);
+  transition: background-color 0.3s;
+}
+.search button.btn-search:hover {
+  background-color: var(--falu-red-hover);
 }
 
 .aspect-ratio {
@@ -151,6 +152,10 @@ nav.nav-top button {
 }
 nav.nav-top button.btn-search {
   background-color: var(--falu-red);
+  transition: background-color 0.3s;
+}
+nav.nav-top button.btn-search:hover {
+  background-color: var(--falu-red-hover);
 }
 nav.nav-top .nav-bar {
   display: none;
@@ -380,6 +385,16 @@ section.articles {
   margin: 80px 0;
   padding: 0 var(--body-padding);
 }
+section.articles .article-container {
+  margin: 30px 0;
+}
+section.articles .article-container hr {
+  margin: 30px 0;
+  border: 1px solid var(--falu-red-light-2);
+}
+section.articles .article-container hr:last-of-type {
+  display: none;
+}
 section.articles .article-container .article {
   display: flex;
   justify-content: space-between;
@@ -412,11 +427,8 @@ section.articles .article-container .article .text h2 {
 section.articles .article-container .article .text h2:hover {
   color: var(--falu-red-hover);
 }
-section.articles .article-container .article hr {
-  margin: 15px 0;
-  border: 1px solid var(--falu-red-light-2);
-}
 section.articles .btn {
+  margin: 10px 0;
   display: flex;
   justify-content: center;
 }
@@ -514,7 +526,7 @@ footer .ending-tag p {
 }
 
 section.single {
-  margin: 40px 0 80px 0;
+  margin-bottom: 40px;
   padding: 0 var(--body-padding);
 }
 
@@ -585,6 +597,9 @@ section.blog-post div.tags a:hover {
 .result-container hr {
   border: 1px solid var(--falu-red-light-2);
 }
+.result-container hr:last-of-type {
+  display: none;
+}
 
 .single .search {
   margin: 36px 0;
@@ -601,7 +616,7 @@ section.blog-post div.tags a:hover {
   width: 200px;
   height: 100%;
 }
-.single .search form input[type="text"] {
+.single .search form input[type=text] {
   font-weight: 700;
   color: var(--falu-red);
 }
@@ -613,11 +628,7 @@ section.blog-post div.tags a:hover {
 }
 
 section.articles.archive {
-  margin-top: 40px;
-}
-section.articles.archive .article-container {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 0px;
 }
 section.articles.archive .content {
   margin-top: 36px;
@@ -666,18 +677,18 @@ section.articles.archive .pagination-links {
   }
 
   .subscribe form button,
-  .subscribe form input,
-  .search form button,
-  .search form input {
+.subscribe form input,
+.search form button,
+.search form input {
     font-size: 18px;
     padding: 0 10px;
   }
   .subscribe form button,
-  .search form button {
+.search form button {
     padding: 0;
   }
   .subscribe form button img,
-  .search form button img {
+.search form button img {
     transform: translateX(-1px);
   }
 
@@ -685,7 +696,7 @@ section.articles.archive .pagination-links {
     margin: 30px 0;
   }
   .subscribe form button,
-  .subscribe form input {
+.subscribe form input {
     font-size: 18px;
     padding: 5px 10px;
   }
@@ -845,6 +856,7 @@ section.articles.archive .pagination-links {
 
   .result-container .result {
     display: flex;
+    margin: 24px 0;
   }
   .result-container .result .image-container {
     display: block;
@@ -862,10 +874,6 @@ section.articles.archive .pagination-links {
   }
   .result-container hr {
     border-top: 1px solid var(--falu-red-light-2);
-  }
-
-  hr:last-of-type {
-    display: none;
   }
 
   .no-results {

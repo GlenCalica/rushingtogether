@@ -9,8 +9,6 @@ Description: For rushingtogether
 
     <div class="article-container">
 
-        <hr>
-
         <?php
         if (have_posts()) : while (have_posts()) : the_post(); ?>
 
